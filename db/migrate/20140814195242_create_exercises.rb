@@ -21,8 +21,8 @@ class CreateExercises < ActiveRecord::Migration
       t.time    :performed_time
       t.time    :performed_rest_time
 
-      t.refereneces :user
-      t.refereneces :workout
+      t.references :user
+      t.references :workout
 
       t.timestamps
 
