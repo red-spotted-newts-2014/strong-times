@@ -3,7 +3,7 @@ require 'json'
 class ExercisesController < ApplicationController
 
   def test_api_call
-    Exercise.first.to_json
+    render json: Exercise.first
   end
 
   def index
