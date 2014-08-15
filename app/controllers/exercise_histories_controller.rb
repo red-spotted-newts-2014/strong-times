@@ -28,6 +28,7 @@ class ExerciseHistoriesController < ApplicationController
     else
       flash[:error]= "could not locate that workout history"
       redirect_to edit_exercise_history_path
+    end
   end
 
   private
