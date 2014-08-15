@@ -3,7 +3,7 @@ require 'bcrypt'
 class User < ActiveRecord::Base
   #has_secure_password
   validates :email, presence: true
-  validates :email, uniqueness: true
+  validates :email, :uniqueness => true
   validates_format_of :email, :with => /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\Z/i
   has_many :workouts
   has_many :exercises
