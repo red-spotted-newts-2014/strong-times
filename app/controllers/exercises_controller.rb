@@ -14,7 +14,8 @@ class ExercisesController < ApplicationController
     if @exercise.save!
       redirect_to exercise_path
     else
-      #render error
+      flash[:error]= "could not locate that workout history"
+      redirect_to new_exercise_path
     end
   end
 
@@ -24,7 +25,8 @@ class ExercisesController < ApplicationController
     if @exercise.update(params[:exercise_params])
       redirect_to exercise_path
     else
-      #render error
+      flash[:error]= "could not locate that workout history"
+      redirect_to edit_exercise_path
     end
   end
 
