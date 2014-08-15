@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get '/', to: 'users#home'
+
   resources :users
   resources :exercises
   resources :workouts
