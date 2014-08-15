@@ -5,3 +5,23 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+
+require 'csv'
+
+name_exercises = []
+CSV.foreach(File.expand_path('db/exercises.csv')) do |row|
+	name_exercises << row
+end
+
+
+#Create weight exercises
+name_exercises.each do |exercise_name|
+	Exercise.create(
+		name: exercise_name.first.split.map(&:capitalize).join(' '),
+		goal_weight: rand(25..250),
+		goal_reps: rand(2..16),
+		goal_rest_time: rand(60)
+		tempo: '3010'
+		)
+end
