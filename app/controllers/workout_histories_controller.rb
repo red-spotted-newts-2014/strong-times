@@ -2,6 +2,10 @@ class WorkoutHistoriesController < ApplicationController
 
 
   def index
+    @workouts_histories = Workout_history.all
+  end
+
+  def show
     @workout_history = Workout_history.find(params[:workout_history_id])
   end
 
