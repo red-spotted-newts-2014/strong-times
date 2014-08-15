@@ -4,6 +4,7 @@ class CreateExerciseHistories < ActiveRecord::Migration
       t.integer :weight
       t.integer :reps
       t.time    :rest_time
+
       t.integer :distance
       t.time    :time
       t.time    :rest_time
