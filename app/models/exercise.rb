@@ -1,3 +1,8 @@
 class Exercise < ActiveRecord::Base
-  belongs_to :user, :workout
+  validates :name, presence: true
+  validates :workout_type, inclusion: { in: ["weights", "long distance running", "sprints", "calisthenics"], message: "%{value} is not a valid type"}
+
+  belongs_to :user
+  has_many :exercise_histories
+
 end
