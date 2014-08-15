@@ -23,6 +23,5 @@ name_exercises.each do |exercise_name|
 		weight: rand(25..250),
 		reps: rand(2..16),
 		rest_time: rand(60),
-		tempo: '3010'
 		)
 end
