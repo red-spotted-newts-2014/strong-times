@@ -28,13 +28,10 @@ class WorkoutsController < ApplicationController
     end
   end
 
-  def destroy
-  end
-
   private
 
   def workout_params
-    params.require[:exercise].permit(:name, :user_id)
+    params.require[:workout].permit(:name, :user_id)
   end
 
 end

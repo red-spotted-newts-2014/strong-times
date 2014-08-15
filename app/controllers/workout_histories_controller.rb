@@ -2,22 +2,35 @@ class WorkoutHistoriesController < ApplicationController
 
 
   def index
-    @workouts_histories = Workout_history.all
+    @workouts_histories = WorkoutHistory.all
   end
 
   def show
-    @workout_history = Workout_history.find(params[:workout_history_id])
+    @workout_history = WorkoutHistory.find(params[:workout_history_id])
   end
 
   def create
-    @workout_history = Workout_history.new(params[:workout_history])
-    @workout_history.save!
+    @workout_history = WorkoutHistory.new(params[:workout_history])
+    if @workout_history.save!
+      redirect_to workout_history_path
+    else
+      #render error
+    end
   end
 
-  def edit
+  def update
+    @workout_history = WorkoutHistory.find(params[:id])
+
+    if @workout.update(params[:workout_params])
+      redirect_to workout_history_path
+    else
+      #render error
+    end
   end
 
-  def destroy
-  end
+  private
 
+  def workout_history_params
+    params.require[:workout_id]
+  end
 end
