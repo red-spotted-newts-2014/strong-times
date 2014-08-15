@@ -1,5 +1,10 @@
+require 'json'
+
 class ExercisesController < ApplicationController
 
+  def test_api_call
+    Exercise.first.to_json
+  end
 
   def index
     @exercises = Exercise.all
