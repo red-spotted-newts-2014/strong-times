@@ -3,11 +3,10 @@ class CreateExerciseHistories < ActiveRecord::Migration
     create_table :exercise_histories do |t|
       t.integer :weight
       t.integer :reps
-      t.time    :rest_time
+      t.string  :rest_time
 
       t.integer :distance
-      t.time    :time
-      t.time    :rest_time
+      t.string    :running_time
 
       t.references :exercises
 

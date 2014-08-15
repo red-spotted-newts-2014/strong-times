@@ -19,23 +19,23 @@ ActiveRecord::Schema.define(version: 20140815114506) do
   create_table "exercise_histories", force: true do |t|
     t.integer  "weight"
     t.integer  "reps"
-    t.time     "rest_time"
+    t.string   "rest_time"
     t.integer  "distance"
-    t.time     "time"
+    t.string   "running_time"
     t.integer  "exercises_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "exercises", force: true do |t|
-    t.string   "type"
+    t.string   "workout_type"
     t.string   "name"
     t.integer  "weight"
     t.integer  "reps"
-    t.time     "rest_time"
+    t.string   "rest_time"
     t.string   "tempo"
     t.integer  "distance"
-    t.time     "time"
+    t.string   "running_time"
     t.integer  "user_id"
     t.integer  "workout_id"
     t.datetime "created_at"
