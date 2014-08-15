@@ -14,7 +14,7 @@ class ExerciseHistoriesController < ApplicationController
     @exercise_history.save!
   end
 
-  def edit
+  def update
   end
 
   def destroy

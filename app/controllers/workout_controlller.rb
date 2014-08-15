@@ -11,13 +11,30 @@ class WorkoutsController < ApplicationController
 
   def create
     @workout = Workout.new(params[:workout])
-    @workout.save!
+    if @workout.save!
+      redirect_to workout_path
+    else
+      #render error
+    end
   end
 
-  def edit
+  def update
+    @workout = Workout.find(params[:id])
+
+    if @workout.update(params[:workout_params])
+      redirect_to exercise_path
+    else
+      #render error
+    end
   end
 
   def destroy
+  end
+
+  private
+
+  def workout_params
+    params.require[:exercise].permit(:name, :user_id)
   end
 
 end
