@@ -18,10 +18,10 @@ end
 #Create weight exercises
 name_exercises.each do |exercise_name|
 	Exercise.create(
+    workout_type: 'weights',
 		name: exercise_name.first.split.map(&:capitalize).join(' '),
-		goal_weight: rand(25..250),
-		goal_reps: rand(2..16),
-		goal_rest_time: rand(60)
-		tempo: '3010'
+		weight: rand(25..250),
+		reps: rand(2..16),
+		rest_time: rand(60),
 		)
 end

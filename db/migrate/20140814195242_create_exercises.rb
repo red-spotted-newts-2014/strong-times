@@ -17,8 +17,6 @@ class CreateExercises < ActiveRecord::Migration
       t.references :workout
 
       t.timestamps
-
-
     end
   end
 end
