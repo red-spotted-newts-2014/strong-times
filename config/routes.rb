@@ -5,6 +5,8 @@ Rails.application.routes.draw do
   resources :workout_histories
   resources :exercise_histories
 
+  get '/test_api_call', :to => 'exercises#test_api_call'
+
 
 
 # shallow do
