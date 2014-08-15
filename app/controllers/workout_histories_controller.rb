@@ -21,7 +21,7 @@ class WorkoutHistoriesController < ApplicationController
   def update
     @workout_history = WorkoutHistory.find(params[:id])
 
-    if @workout.update(params[:workout_params])
+    if @workout_history.update(params[:workout_history_params])
       redirect_to workout_history_path
     else
       #render error
@@ -31,6 +31,6 @@ class WorkoutHistoriesController < ApplicationController
   private
 
   def workout_history_params
-    params.require[:workout_id]
+    params.require[:workout_history].permit[:workout_id]
   end
 end

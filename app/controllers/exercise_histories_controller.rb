@@ -2,22 +2,35 @@ class ExerciseHistoriesController < ApplicationController
 
 
   def index
-    @exercise_histories = Exercise_history.all
+    @exercise_histories = ExerciseHistory.all
   end
 
   def show
-    @exercise_history = Exercise_history.find(params[:exercise_history_id])
+    @exercise_history = ExerciseHistory.find(params[:exercise_history_id])
   end
 
   def create
-    @exercise_history = Exercise_history.new(params[:exercise_history])
-    @exercise_history.save!
+    @exercise_history = ExerciseHistory.new(params[:exercise_history])
+    if @exercise_history.save!
+      redirect_to exercise_history_path
+    else
+      #render error
+    end
   end
 
   def update
+    @exercise_history = ExerciseHistory.find(params[:id])
+
+    if @exercise_history.update(params[:exercise_history_params])
+      redirect_to exercise_history_path
+    else
+      #render error
   end
 
-  def destroy
+  private
+
+  def exercise_history_params
+    params.require[:exercise_history].permit[:weight, :reps, :rest_time, :distance, :running_time, :exercise_id]
   end
 
 end
