@@ -11,7 +11,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140814195242) do
+ActiveRecord::Schema.define(version: 20140815114506) do
+
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
+  create_table "exercise_histories", force: true do |t|
+    t.integer  "weight"
+    t.integer  "reps"
+    t.time     "rest_time"
+    t.integer  "distance"
+    t.time     "time"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "exercises", force: true do |t|
     t.string   "type"
@@ -38,6 +51,9 @@ ActiveRecord::Schema.define(version: 20140814195242) do
     t.string   "password_hash"
     t.datetime "created_at"
     t.datetime "updated_at"
+  end
+
+  create_table "workout_histories", force: true do |t|
   end
 
   create_table "workouts", force: true do |t|
