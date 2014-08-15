@@ -11,22 +11,31 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140814195242) do
+ActiveRecord::Schema.define(version: 20140815114506) do
+
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
+  create_table "exercise_histories", force: true do |t|
+    t.integer  "weight"
+    t.integer  "reps"
+    t.string   "rest_time"
+    t.integer  "distance"
+    t.string   "running_time"
+    t.integer  "exercises_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "exercises", force: true do |t|
-    t.string   "type"
+    t.string   "workout_type"
     t.string   "name"
-    t.integer  "goal_weight"
-    t.integer  "goal_reps"
-    t.time     "goal_rest_time"
+    t.integer  "weight"
+    t.integer  "reps"
+    t.string   "rest_time"
     t.string   "tempo"
-    t.integer  "performed_weight"
-    t.integer  "performed_reps"
-    t.time     "performed_rest_time"
-    t.integer  "goal_distance"
-    t.time     "goal_time"
-    t.integer  "performed_distance"
-    t.time     "performed_time"
+    t.integer  "distance"
+    t.string   "running_time"
     t.integer  "user_id"
     t.integer  "workout_id"
     t.datetime "created_at"
@@ -36,6 +45,12 @@ ActiveRecord::Schema.define(version: 20140814195242) do
   create_table "users", force: true do |t|
     t.string   "email"
     t.string   "password_hash"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "workout_histories", force: true do |t|
+    t.integer  "workouts_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
