@@ -5,7 +5,7 @@ class WorkoutsController < ApplicationController
   end
 
   def show
-    @workout = Workout.find(params[:workout_id])
+    @workouts = Workout.find(params[:id])
   end
 
   def create
@@ -27,6 +27,12 @@ class WorkoutsController < ApplicationController
       flash[:error]= "could not locate that workout history"
       redirect_to edit_workout_path
     end
+  end
+
+  def destroy
+    @workout = Workout.find(params[:id])
+    @workout.destroy
+    redirect_to workout_path
   end
 
   private
