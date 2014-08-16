@@ -13,8 +13,9 @@ class CreateExercises < ActiveRecord::Migration
       #attributes for running
       t.integer   :distance
       t.string    :running_time
-      t.references :user
+
       t.references :workout
+
 
       t.timestamps
     end

@@ -25,7 +25,6 @@ describe "when user attempts login without email" do
 end
 
 
-#validates uniqueness of email ==> NOT CURRENTLY WORKING
 describe "when user attempts login with duplicate email" do
   before do
     @user_with_email = User.create(email: 'alan@gmail.com', password: 'testing')

@@ -8,7 +8,7 @@ class UsersController < ApplicationController
   end
 
   def show
-    @user = User.find_by_email(params[:email])
+    @user = User.find_by_email(params[:id])
   end
 
   def login
@@ -32,12 +32,6 @@ class UsersController < ApplicationController
     @user = User.new(params[:user])
     @user.password = params[:password]
     @user.save!
-  end
-
-  def edit
-  end
-
-  def destroy
   end
 
 end
