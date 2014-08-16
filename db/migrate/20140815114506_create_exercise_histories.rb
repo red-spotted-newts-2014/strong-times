@@ -8,7 +8,7 @@ class CreateExerciseHistories < ActiveRecord::Migration
       t.integer :distance
       t.string  :running_time
 
-      t.references :exercises
+      t.references :exercise
       t.references :user
 
       t.timestamps
