@@ -29,6 +29,8 @@ describe ExercisesController, :type => :controller do
 
       it "updates an exercise with valid params" do
         exercise = Exercise.create(:workout_type => "weights", :name => "bench press")
+        put :update, {:id => exercise.id, :exercise => {:name => "squats"}}
+        expect(exercise.name).to eq("squats")
 
 
 

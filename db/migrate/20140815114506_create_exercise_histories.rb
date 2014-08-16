@@ -9,6 +9,7 @@ class CreateExerciseHistories < ActiveRecord::Migration
       t.string  :running_time
 
       t.references :exercises
+      t.references :user
 
       t.timestamps
     end

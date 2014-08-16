@@ -3,7 +3,7 @@ require 'json'
 class ExercisesController < ApplicationController
 
   def test_api_call
-    Exercise.first.to_json
+    render json: Exercise.first
   end
 
   def index
@@ -15,12 +15,15 @@ class ExercisesController < ApplicationController
   end
 
   def create
-    @exercise = Exercise.new(params[:exercise])
+    data_hash = JSON.parse(params[:exercise])
+    @exercise = Exercise.new(data_hash)
     if @exercise.save!
-      redirect_to exercise_path
+      # redirect_to exercise_path
+      render json: "Success this works"
     else
-      flash[:error]= "could not locate that workout history"
-      redirect_to new_exercise_path
+      # flash[:error]= "could not locate that workout history"
+      # redirect_to new_exercise_path
+       render json: "something went wrong"
     end
   end
 
