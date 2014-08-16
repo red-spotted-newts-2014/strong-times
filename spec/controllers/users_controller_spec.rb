@@ -15,5 +15,19 @@ describe UsersController, :type => :controller do
       expect(assigns(:user)).to eq(user)
     end
 
+    #create login tests when session are set up
+
+     context "#create" do
+      it "creates a user with valid params" do
+        expect{User.create(:email => "fake@fakeemail123.com", :password => "testpassword123")}.to change{User.count}.by(1)
+      end
+
+      it "doesn't create a user with invalid params" do
+        expect{User.create(:email => "ham", :password => "test123test")}.to change{User.count}.by(0)
+      end
+    end
+
+
+
   end
 end

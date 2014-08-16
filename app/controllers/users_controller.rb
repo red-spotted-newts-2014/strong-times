@@ -34,10 +34,4 @@ class UsersController < ApplicationController
     @user.save!
   end
 
-  def edit
-  end
-
-  def destroy
-  end
-
 end

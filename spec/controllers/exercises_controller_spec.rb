@@ -16,11 +16,11 @@ describe ExercisesController, :type => :controller do
     end
 
     context "#create" do
-      it "creates a post with valid params" do
+      it "creates a exercise with valid params" do
         expect{Exercise.create(:workout_type => "weights", :name => "bench press")}.to change{Exercise.count}.by(1)
       end
 
-      it "doesn't create a post with invalid params" do
+      it "doesn't create a exercise with invalid params" do
         expect{Exercise.create(:workout_type => "ham", :name => "bench press")}.to change{Exercise.count}.by(0)
       end
     end
