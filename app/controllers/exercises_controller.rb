@@ -17,10 +17,12 @@ class ExercisesController < ApplicationController
   def create
     @exercise = Exercise.new(params[:exercise])
     if @exercise.save!
-      redirect_to exercise_path
+      # redirect_to exercise_path
+      render json: "Success this works"
     else
-      flash[:error]= "could not locate that workout history"
-      redirect_to new_exercise_path
+      # flash[:error]= "could not locate that workout history"
+      # redirect_to new_exercise_path
+       render json: "something went wrong"
     end
   end
 

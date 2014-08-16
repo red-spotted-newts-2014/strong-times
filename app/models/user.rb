@@ -8,7 +8,7 @@ class User < ActiveRecord::Base
   has_many :workouts
   has_many :exercises
   has_many :workout_histories, through: :workouts
-  has_many :exercise_histories, through: :exercises
+  has_many :exercise_histories
 
   include BCrypt
 
