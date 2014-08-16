@@ -1,0 +1,22 @@
+
+$color-primary-0: #7A9AAA; /* Main Primary color */
+$color-primary-1: #DCE6EB;
+$color-primary-2: #ADC3CE;
+$color-primary-3: #527A8E;
+$color-primary-4: #2F5C72;
+
+/* As RGBa codes */
+
+$rgba-primary-0: rgba(122,154,170,1);  /* Main Prima */
+$rgba-primary-1: rgba(220,230,235,1);
+$rgba-primary-2: rgba(173,195,206,1);
+$rgba-primary-3: rgba( 82,122,142,1);
+$rgba-primary-4: rgba( 47, 92,114,1);
+
+h1 {
+  margin: 0.5em 0;
+  font-size: 200%;
+  color:$color-primary-3;
+  }
+
+
