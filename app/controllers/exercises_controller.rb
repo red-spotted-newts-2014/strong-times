@@ -8,6 +8,7 @@ class ExercisesController < ApplicationController
 
   def index
     @exercises = Exercise.all
+    @exercise = Exercise.new
   end
 
   def show
