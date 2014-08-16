@@ -15,7 +15,8 @@ class ExercisesController < ApplicationController
   end
 
   def create
-    @exercise = Exercise.new(params[:exercise])
+    data_hash = JSON.parse(params[:exercise])
+    @exercise = Exercise.new(data_hash)
     if @exercise.save!
       # redirect_to exercise_path
       render json: "Success this works"
