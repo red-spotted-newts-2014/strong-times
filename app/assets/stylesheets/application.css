@@ -13,3 +13,6 @@
  *= require_tree .
  *= require_self
  */
+@import "layout.css.scss";
+@import "application.css.scss";
+@import "normalize.css.scss";
