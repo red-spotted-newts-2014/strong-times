@@ -26,15 +26,19 @@ describe ExercisesController, :type => :controller do
     end
 
     context "#update" do
-
       it "updates an exercise with valid params" do
         exercise = Exercise.create(:workout_type => "weights", :name => "bench press")
-        put :update, {:id => exercise.id, :exercise => {:name => "squats"}}
-        expect(exercise.name).to eq("squats")
-
-
-
+        exercise.update(:name => "ham")
+        expect(exercise.name).to eq("ham")
       end
+    end
+
+    it "#destroy" do
+      exercise = Exercise.create(:workout_type => "weights", :name => "bench press")
+
+      expect do
+        delete :destroy, id: exercise
+      end.to change{Exercise.count}.by -1
     end
 
 
