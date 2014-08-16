@@ -22,7 +22,8 @@ ActiveRecord::Schema.define(version: 20140815114506) do
     t.string   "rest_time"
     t.integer  "distance"
     t.string   "running_time"
-    t.integer  "exercises_id"
+    t.integer  "workout_history_id"
+    t.integer  "exercise_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -36,7 +37,6 @@ ActiveRecord::Schema.define(version: 20140815114506) do
     t.string   "tempo"
     t.integer  "distance"
     t.string   "running_time"
-    t.integer  "user_id"
     t.integer  "workout_id"
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -50,7 +50,8 @@ ActiveRecord::Schema.define(version: 20140815114506) do
   end
 
   create_table "workout_histories", force: true do |t|
-    t.integer  "workouts_id"
+    t.integer  "user_id"
+    t.integer  "workout_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

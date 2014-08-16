@@ -8,7 +8,7 @@ class UsersController < ApplicationController
   end
 
   def show
-    @user = User.find_by_email(params[:email])
+    @user = User.find_by_email(params[:id])
   end
 
   def login

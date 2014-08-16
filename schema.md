@@ -38,7 +38,7 @@
     <type label="SET" length="1" sql="SET" quote=""/>
     <type label="Bit" length="0" sql="bit" quote=""/>
   </group>
-</datatypes><table x="117" y="61" name="users">
+</datatypes><table x="56" y="650" name="users">
 <row name="id" null="1" autoincrement="1">
 <datatype>INTEGER</datatype>
 <default>NULL</default></row>
@@ -52,7 +52,7 @@
 <part>id</part>
 </key>
 </table>
-<table x="318" y="70" name="workouts">
+<table x="237" y="650" name="workouts">
 <row name="id" null="1" autoincrement="1">
 <datatype>INTEGER</datatype>
 <default>NULL</default></row>
@@ -67,54 +67,33 @@
 <part>id</part>
 </key>
 </table>
-<table x="213" y="211" name="exercises">
+<table x="67" y="323" name="exercises">
 <row name="id" null="1" autoincrement="1">
 <datatype>INTEGER</datatype>
 <default>NULL</default></row>
-<row name="type" null="1" autoincrement="0">
+<row name="workout_type" null="1" autoincrement="0">
 <datatype>MEDIUMTEXT</datatype>
 <default>NULL</default></row>
 <row name="name" null="1" autoincrement="0">
 <datatype>MEDIUMTEXT</datatype>
 <default>NULL</default></row>
-<row name="goal_weight" null="1" autoincrement="0">
+<row name="weight" null="1" autoincrement="0">
 <datatype>INTEGER</datatype>
 <default>NULL</default></row>
-<row name="goal_reps" null="1" autoincrement="0">
+<row name="reps" null="1" autoincrement="0">
 <datatype>INTEGER</datatype>
 <default>NULL</default></row>
-<row name="goal_rest_time" null="1" autoincrement="0">
+<row name="rest_time" null="1" autoincrement="0">
 <datatype>TIME</datatype>
 <default>NULL</default></row>
 <row name="tempo" null="1" autoincrement="0">
 <datatype>MEDIUMTEXT</datatype>
 <default>NULL</default></row>
-<row name="performed_weight" null="1" autoincrement="0">
+<row name="distance" null="1" autoincrement="0">
 <datatype>INTEGER</datatype>
 <default>NULL</default></row>
-<row name="performed_reps" null="1" autoincrement="0">
-<datatype>INTEGER</datatype>
-<default>NULL</default></row>
-<row name="performed_rest_time" null="1" autoincrement="0">
-<datatype>TIME</datatype>
-<default>NULL</default></row>
-<row name="goal_distance" null="1" autoincrement="0">
-<datatype>INTEGER</datatype>
-<default>NULL</default></row>
-<row name="goal_time" null="1" autoincrement="0">
-<datatype>TIME</datatype>
-<default>NULL</default></row>
-<row name="goal_rest_time" null="1" autoincrement="0">
-<datatype>TIME</datatype>
-<default>NULL</default></row>
-<row name="performed_distance" null="1" autoincrement="0">
-<datatype>INTEGER</datatype>
-<default>NULL</default></row>
-<row name="performed_time" null="1" autoincrement="0">
-<datatype>TIME</datatype>
-<default>NULL</default></row>
-<row name="performed_rest_time" null="1" autoincrement="0">
-<datatype>TIME</datatype>
+<row name="running_time" null="1" autoincrement="0">
+<datatype>MEDIUMTEXT</datatype>
 <default>NULL</default></row>
 <row name="user_id" null="1" autoincrement="0">
 <datatype>INTEGER</datatype>
@@ -128,6 +107,50 @@
 <part>id</part>
 </key>
 </table>
+<table x="411" y="570" name="workout_histories">
+<row name="id" null="1" autoincrement="1">
+<datatype>INTEGER</datatype>
+<default>NULL</default><relation table="workouts" row="id" />
+</row>
+<row name="workout_id" null="1" autoincrement="0">
+<datatype>INTEGER</datatype>
+<default>NULL</default></row>
+<key type="PRIMARY" name="">
+<part>id</part>
+</key>
+</table>
+<table x="277" y="323" name="exercise_histories">
+<row name="id" null="1" autoincrement="1">
+<datatype>INTEGER</datatype>
+<default>NULL</default></row>
+<row name="weight" null="1" autoincrement="0">
+<datatype>INTEGER</datatype>
+<default>NULL</default></row>
+<row name="reps" null="1" autoincrement="0">
+<datatype>INTEGER</datatype>
+<default>NULL</default></row>
+<row name="rest_time" null="1" autoincrement="0">
+<datatype>MEDIUMTEXT</datatype>
+<default>NULL</default></row>
+<row name="distance" null="1" autoincrement="0">
+<datatype>DECIMAL</datatype>
+<default>NULL</default></row>
+<row name="running_time" null="1" autoincrement="0">
+<datatype>MEDIUMTEXT</datatype>
+<default>NULL</default></row>
+<row name="exercise_id" null="1" autoincrement="0">
+<datatype>INTEGER</datatype>
+<default>NULL</default><relation table="exercises" row="id" />
+</row>
+<row name="user_id" null="1" autoincrement="0">
+<datatype>INTEGER</datatype>
+<default>NULL</default><relation table="users" row="id" />
+</row>
+<key type="PRIMARY" name="">
+<part>id</part>
+</key>
+</table>
 </sql>
+
 
 ```
