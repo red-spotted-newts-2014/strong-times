@@ -9,8 +9,7 @@ describe ExerciseHistoriesController, :type => :controller do
       expect(assigns(:exercise_histories)).to eq(ExerciseHistory.all)
     end
 
-    xit "#show" do
-      pending
+    it "#show" do
       exercise_history = ExerciseHistory.create(exercise_id: 1, weight: 75)
       get :show, id: exercise_history
       expect(assigns(:exercise_history)).to eq(exercise_history)
