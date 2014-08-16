@@ -15,7 +15,7 @@ class ExercisesController < ApplicationController
   end
 
   def create
-    data_hash = JSON.parse(params[:exercise])
+    # data_hash = JSON.parse(params[:exercise])
     @exercise = Exercise.new(data_hash)
     if @exercise.save!
       # redirect_to exercise_path
@@ -33,7 +33,7 @@ class ExercisesController < ApplicationController
     if @exercise.update(params[:exercise_params])
       redirect_to exercise_path
     else
-      flash[:error]= "could not locate that workout history"
+      flash[:error]= "could not locate that exercise history"
       redirect_to edit_exercise_path
     end
   end
