@@ -9,7 +9,6 @@ describe UsersController, :type => :controller do
     end
 
     it "#show" do
-      pending
       user = User.create(:email => "test@test5.com", :password => "testpassword123")
       get :show, id: user
       expect(assigns(:user)).to eq(user)

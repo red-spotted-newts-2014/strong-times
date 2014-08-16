@@ -10,7 +10,6 @@ describe WorkoutsController, :type => :controller do
     end
 
      it "#show" do
-      pending
       workout = Workout.create(:name => "Monday Workout")
       get :show, id: workout
       expect(assigns(:workout)).to eq(workout)
