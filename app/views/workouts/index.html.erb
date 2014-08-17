@@ -1,4 +1,5 @@
-<%= form_for @workout, url: {action: "create"} do |f| %>
-  <%= f.text_field :name %>
-  <%= f.submit "Create" %>
+<% current_user.workouts.each do |workout| %>
+  <%= workout.name %>
+  <%= workout.user_id %>
 <% end %>
+
