@@ -23,6 +23,8 @@ nav {
 
 }
 
+
+
 .container{
   margin: auto;
   max-width: 90em;
@@ -33,3 +35,14 @@ nav {
   background-size: 100% 100%;
 }
 
+.optionsBox{
+  padding: 1em;
+  width: 40em;
+  height: 7em;
+  background-color: $rgba-primary-6;
+  margin-left: 10em;
+}
+.optionsBox ul li{
+  list-style-type: none;
+  display: inline-block;
+}
