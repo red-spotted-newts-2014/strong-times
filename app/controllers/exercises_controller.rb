@@ -1,5 +1,6 @@
 
 class ExercisesController < ApplicationController
+  before_action :authenticate_user!
 
   def test_api_call
     render json: Exercise.first
