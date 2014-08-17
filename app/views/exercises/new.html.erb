@@ -1,0 +1,26 @@
+<%= @workout.name %> <br/><br/>
+
+Create a New Exercise
+
+<!-- NEED AJAX  DO THIS -->
+<%= form_for @exercise, url: {action: "create"} do |f| %>
+  Name <%= f.text_field :name %> <br/>
+  Workout Type :<%= f.text_field :workout_type %> <br/>
+  Weight:  <%= f.text_field :weight %> <br/>
+  Reps: <%= f.text_field :reps %> <br/>
+  Rest Time: <%= f.text_field :rest_time %> <br/>
+  Tempo: <%= f.text_field :tempo %> <br/>
+  Distance: <%= f.text_field :distance %> <br/>
+  Running-Time: <%= f.text_field :running_time %> <br/>
+
+  <%= f.submit "Create" %>
+<% end %>
+
+
+
+
+
+
+
+
+
