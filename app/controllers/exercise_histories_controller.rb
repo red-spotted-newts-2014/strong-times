@@ -12,17 +12,16 @@ class ExerciseHistoriesController < ApplicationController
   end
 
   def create
-        @exercise_history = ExerciseHistory.new(exercise_history_params)
+    @exercise_history = ExerciseHistory.new(exercise_history_params)
     if @exercise_history.save
       respond_to do |format|
         format.html
-        format.json { render :json => { :exercise_history => @exercise_history } }
+        format.json { render :json => { :exercise_history => @exercise_history.id } }
       end
-      # redirect_to exercise_history_path
     else
       respond_to do |format|
         format.html
-        format.json { render :json => { :error => "error" } }
+        format.json { render :json => { :error => "No exercise Logged" } }
       end
     end
   end
