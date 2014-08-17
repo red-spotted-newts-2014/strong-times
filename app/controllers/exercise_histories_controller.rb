@@ -12,10 +12,8 @@ class ExerciseHistoriesController < ApplicationController
   end
 
   def create
-    puts params[:exercise_history][:reps]
         @exercise_history = ExerciseHistory.new(exercise_history_params)
-    if @exercise_history.save!
-      puts @exercise_history
+    if @exercise_history.save
       respond_to do |format|
         format.html
         format.json { render :json => { :exercise_history => @exercise_history } }
