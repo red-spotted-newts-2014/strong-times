@@ -1,0 +1,20 @@
+<%= link_to "create new workout", new_user_workout_path  %><br/>
+
+
+<table style="border:1px solid black width:900px">
+  <th>
+    <td>Workout</td>
+    <td>exercise</td>
+    <td>exercise</td>
+  </th>
+  <tbody style="border:1px solid black width:900px">
+    <% current_user.workouts.each do |workout| %>
+     <tr style="height:50px">
+        <td style="width:100px"> <%= workout.name %></td>
+          <% workout.exercises.each do |x| %>
+            <td style="width:100px"><%= x.name %></td>
+          <% end %>
+     </tr>
+    <% end %>
+  </tbody>
+</table>

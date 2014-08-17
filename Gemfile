@@ -8,6 +8,7 @@ gem 'rails', '4.1.4'
 #gem 'sqlite3'
 gem 'pg'
 gem 'thin'
+gem 'devise'
 
 gem 'bcrypt-ruby', '~> 3.1.5'
 # Use SCSS for stylesheets

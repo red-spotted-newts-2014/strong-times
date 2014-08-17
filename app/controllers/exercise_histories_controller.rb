@@ -1,6 +1,7 @@
 require 'json'
 
 class ExerciseHistoriesController < ApplicationController
+  before_action :authenticate_user!
 
   def index
     @exercise_histories = ExerciseHistory.all

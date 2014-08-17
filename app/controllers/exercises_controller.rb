@@ -1,6 +1,6 @@
-require 'json'
 
 class ExercisesController < ApplicationController
+  before_action :authenticate_user!
 
   def test_api_call
     render json: Exercise.first
@@ -8,7 +8,11 @@ class ExercisesController < ApplicationController
 
   def index
     @exercises = Exercise.all
+  end
+
+  def new
     @exercise = Exercise.new
+    @workout = Workout.find(params[:workout_id])
   end
 
   def show
@@ -17,10 +21,11 @@ class ExercisesController < ApplicationController
 
   def create
     # data_hash = JSON.parse(params[:exercise])
-    @exercise = Exercise.new(data_hash)
+    workout = Workout.find(params[:workout_id])
+    @exercise = workout.exercises.build(exercise_params)
     if @exercise.save!
-      # redirect_to exercise_path
-      render json: "Success this works"
+      redirect_to user_workouts_path(current_user)
+      # render json: "Success this works"
     else
       # flash[:error]= "could not locate that workout history"
       # redirect_to new_exercise_path
@@ -49,7 +54,7 @@ class ExercisesController < ApplicationController
   private
 
   def exercise_params
-    params.require[:exercise].permit(:workout_type, :name, :weight, :reps, :rest_time, :tempo, :distance, :running_time, :user_id, :workout_id)
+    params.require(:exercise).permit(:workout_type, :name, :weight, :reps, :rest_time, :tempo, :distance, :running_time, :user_id, :workout_id)
   end
 
 end

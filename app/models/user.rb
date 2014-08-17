@@ -1,23 +1,11 @@
-require 'bcrypt'
-
 class User < ActiveRecord::Base
-  #has_secure_password
-  validates :email, presence: true
-  validates :email, :uniqueness => true
-  validates_format_of :email, :with => /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\Z/i
+  # Include default devise modules. Others available are:
+  # :confirmable, :lockable, :timeoutable and :omniauthable
+  devise :database_authenticatable, :registerable,
+         :recoverable, :rememberable, :trackable, :validatable
+
   has_many :workouts
   has_many :workout_histories
   has_many :exercises, through: :workouts
   has_many :exercise_histories, through: :workout_histories
-
-  include BCrypt
-
-  def password
-    @password ||= Password.new(password_hash)
-  end
-
-  def password=(new_password)
-    @password = Password.create(new_password)
-    self.password_hash = @password
-  end
 end
