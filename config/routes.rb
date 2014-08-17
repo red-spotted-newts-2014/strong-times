@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
-  get '/', to: 'users#home'
+  devise_for :users
+  get '/', to: 'welcome#index'
 
-  resources :users
   resources :exercises
   resources :workouts
   resources :workout_histories
