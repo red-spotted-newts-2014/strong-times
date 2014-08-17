@@ -12,6 +12,8 @@ Rails.application.routes.draw do
 
   get '/test_api_call', :to => 'exercises#test_api_call'
 
+  get '/workout/name', :to => 'workouts#name'
+
 
     # resources :users do
     #   resources :workouts do
