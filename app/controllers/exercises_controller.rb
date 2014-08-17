@@ -24,8 +24,8 @@ class ExercisesController < ApplicationController
     workout = Workout.find(params[:workout_id])
     @exercise = workout.exercises.build(exercise_params)
     if @exercise.save!
-      # redirect_to exercise_path
-      render json: "Success this works"
+      redirect_to user_workouts_path(current_user)
+      # render json: "Success this works"
     else
       # flash[:error]= "could not locate that workout history"
       # redirect_to new_exercise_path

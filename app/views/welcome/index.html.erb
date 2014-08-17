@@ -3,7 +3,7 @@
 
 <h2>WELCOME TO REST-LESS</h2>
 
-
+<div class="optionsBox">
 <% if user_signed_in? %>
   Do You Want to: <br/>
   <%= link_to "Create A New Workout", new_user_workout_path(current_user) %><br/>
@@ -15,7 +15,7 @@
   <%= button_to('Sign Up', new_user_registration_path, :method => "get") %>
 
 <% end %>
-
+</div>
 
 
 <div class="appDescription">
