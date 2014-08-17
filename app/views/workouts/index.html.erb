@@ -1,5 +1,11 @@
-<% current_user.workouts.each do |workout| %>
-  <%= workout.name %>
-  <%= workout.id %>
-<% end %>
+<%= link_to "create new workout", new_user_workout_path  %>
 
+
+<table>
+<% current_user.workouts.each do |workout| %>
+ <tr> workout: <%= workout.name %></tr>
+  <% workout.exercises.each do |x| %>
+    <td><%= x.name %></td>
+  <% end %>
+<% end %>
+</table>

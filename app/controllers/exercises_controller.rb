@@ -8,7 +8,11 @@ class ExercisesController < ApplicationController
 
   def index
     @exercises = Exercise.all
+  end
+
+  def new
     @exercise = Exercise.new
+    @workout = Workout.find(params[:workout_id])
   end
 
   def show
@@ -17,7 +21,8 @@ class ExercisesController < ApplicationController
 
   def create
     # data_hash = JSON.parse(params[:exercise])
-    @exercise = Exercise.new(data_hash)
+    workout = Workout.find(params[:workout_id])
+    @exercise = workout.exercises.build(exercise_params)
     if @exercise.save!
       # redirect_to exercise_path
       render json: "Success this works"
@@ -49,7 +54,7 @@ class ExercisesController < ApplicationController
   private
 
   def exercise_params
-    params.require[:exercise].permit(:workout_type, :name, :weight, :reps, :rest_time, :tempo, :distance, :running_time, :user_id, :workout_id)
+    params.require(:exercise).permit(:workout_type, :name, :weight, :reps, :rest_time, :tempo, :distance, :running_time, :user_id, :workout_id)
   end
 
 end

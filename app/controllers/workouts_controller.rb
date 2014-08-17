@@ -15,9 +15,9 @@ class WorkoutsController < ApplicationController
   end
 
   def create
-    @workout = current_user.workouts.new(params[:workout_params])
+    @workout = current_user.workouts.build(workout_params)
     if @workout.save!
-      redirect_to workout_path
+      redirect_to user_workouts_path
     else
       flash[:error]= "could not locate that workout history"
       redirect_to new_workout_history_path

@@ -1,16 +1,23 @@
-THIS IS OUR HOME PAGE
 
 
-WELCOME TO REST-LESS <br/>
 
-A Workout App Thingy <br/><br/><br/>
+<h2>WELCOME TO REST-LESS</h2>
+
 
 <% if user_signed_in? %>
   Do You Want to: <br/>
-  Create a New Workout?<br/>
-  Checkout Your Workout History</br>
+  <%= link_to "Create A New Workout", new_user_workout_path(current_user) %><br/>
+  <%= link_to "View All Workouts", user_workouts_path(current_user) %><br/>
+  <%= link_to "View workout history"  %>
 <% else %>
   Please Log In Or Sign Up To Track Your Exercises Today
+   <%= button_to('Login', new_user_session_path, :method => "get")  %>
+  <%= button_to('Sign Up', new_user_registration_path, :method => "get") %>
+
 <% end %>
 
 
+
+<div class="appDescription">
+  <p>app description</p>
+</div>
