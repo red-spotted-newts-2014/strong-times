@@ -1,4 +1,6 @@
 class WorkoutHistoriesController < ApplicationController
+  before_action :authenticate_user!
+
 
   def index
     @workout_histories = WorkoutHistory.all

@@ -1,7 +1,13 @@
 class WorkoutsController < ApplicationController
+  before_action :authenticate_user!
+
 
   def index
     @workouts = Workout.all
+  end
+
+  def new
+    @workout = Workout.new
   end
 
   def show
@@ -9,7 +15,7 @@ class WorkoutsController < ApplicationController
   end
 
   def create
-    @workout = Workout.new(params[:workout])
+    @workout = current_user.workouts.new(params[:workout_params])
     if @workout.save!
       redirect_to workout_path
     else
@@ -38,7 +44,7 @@ class WorkoutsController < ApplicationController
   private
 
   def workout_params
-    params.require[:workout].permit(:name, :user_id)
+    params.require[:workout].permit[:name, :user_id]
   end
 
 end

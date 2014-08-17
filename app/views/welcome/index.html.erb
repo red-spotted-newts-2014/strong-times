@@ -1,12 +1,16 @@
 THIS IS OUR HOME PAGE
 
+
+WELCOME TO REST-LESS <br/>
+
+A Workout App Thingy <br/><br/><br/>
+
 <% if user_signed_in? %>
-  <li>
-  <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>
-  </li>
+  Do You Want to: <br/>
+  Create a New Workout?<br/>
+  Checkout Your Workout History</br>
 <% else %>
-  <li>
-  <%= link_to('Login', new_user_session_path)  %>
-  <%= link_to('Sign Up', new_user_registration_path) %>
-  </li>
+  Please Log In Or Sign Up To Track Your Exercises Today
 <% end %>
+
+
