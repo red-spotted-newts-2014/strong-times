@@ -11,12 +11,17 @@ class WorkoutHistoriesController < ApplicationController
   end
 
   def create
-    @workout_history = WorkoutHistory.new(params[:workout_history])
+    @workout_history = WorkoutHistory.new(workout_history_params)
     if @workout_history.save!
-      redirect_to workout_history_path
+      respond_to do |format|
+        format.html
+        format.json { render :json => { :workout_history_id => @workout_history.id } }
+      end 
     else
-      flash[:error]= "could not locate that workout history"
-      redirect_to new_workout_history_path
+      respond_to do |format|
+        format.html
+        format.json { render :json => { :error => "error: No workout logged" } }
+      end
     end
   end
 
@@ -36,6 +41,6 @@ class WorkoutHistoriesController < ApplicationController
   private
 
   def workout_history_params
-    params.require[:workout_history].permit[:workout_id]
+    params.require(:workout_history).permit(:workout_id, :user_id)
   end
 end
