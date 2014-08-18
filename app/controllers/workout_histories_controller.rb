@@ -6,23 +6,34 @@ class WorkoutHistoriesController < ApplicationController
     @workout_histories = WorkoutHistory.all
   end
 
+  def new
+    @workout_history = WorkoutHistory.new
+    @workout = Workout.find(params[:workout_id])
+  end
+
   def show
     @workout_history = WorkoutHistory.find(params[:id])
   end
 
   def create
-    @workout_history = WorkoutHistory.new(workout_history_params)
+
+    workout = Workout.find(params[:workout_history_id])
+    @workout_history = workout.workout_histories.build(workout_history_params)
     if @workout_history.save!
-      respond_to do |format|
-        format.html
-        format.json { render :json => { :workout_history_id => @workout_history.id } }
-      end 
-    else
-      respond_to do |format|
-        format.html
-        format.json { render :json => { :error => "error: No workout logged" } }
-      end
-    end
+      redirect_to user_workouts_path(current_user)
+# =======
+#     @workout_history = WorkoutHistory.new(workout_history_params)
+    # if @workout_history.save!
+    #   respond_to do |format|
+    #     format.html
+    #     format.json { render :json => { :workout_history_id => @workout_history.id } }
+    #   end
+    # else
+    #   respond_to do |format|
+    #     format.html
+    #     format.json { render :json => { :error => "error: No workout logged" } }
+    #   end
+     end
   end
 
   def update
@@ -41,6 +52,6 @@ class WorkoutHistoriesController < ApplicationController
   private
 
   def workout_history_params
-    params.require(:workout_history).permit(:workout_id, :user_id)
+    params.require(:workout_history).permit(:workout_id)
   end
 end
