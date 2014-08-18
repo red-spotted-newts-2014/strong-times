@@ -12,6 +12,7 @@ Rails.application.routes.draw do
 
   get '/test_api_call', :to => 'exercises#test_api_call'
 
+get '/exercises', :to => 'exercises#index'
 
   shallow do
     resources :users do
