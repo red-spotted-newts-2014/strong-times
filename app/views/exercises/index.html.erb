@@ -1,3 +1,9 @@
+
+<%= render 'shared/search' %>
 <% @exercises.each do |exercise| %>
-  <%= exercise.name %> <br/>
+<div class="search_container">
+	<table class="search_table">
+		<tr class="search_row"><%= exercise.name %></tr>
+	</table>
+</div>
 <% end %>
