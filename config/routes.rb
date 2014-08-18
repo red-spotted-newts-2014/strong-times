@@ -12,9 +12,6 @@ Rails.application.routes.draw do
 
   get '/test_api_call', :to => 'exercises#test_api_call'
 
-  get '/workout/name', :to => 'workouts#name'
-
-
     # resources :users do
     #   resources :workouts do
     #   # 'lang/:lang_id/queries',           'lang/:lang_id/queries/new',           'queries/:id',      'queries/:id/edit' =>
