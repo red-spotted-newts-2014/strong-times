@@ -1,10 +1,5 @@
-
 class ExercisesController < ApplicationController
   before_action :authenticate_user!
-
-  def test_api_call
-    render json: Exercise.first
-  end
 
   def index
     @exercises = Exercise.all
@@ -20,16 +15,12 @@ class ExercisesController < ApplicationController
   end
 
   def create
-    # data_hash = JSON.parse(params[:exercise])
     workout = Workout.find(params[:workout_id])
     @exercise = workout.exercises.build(exercise_params)
     if @exercise.save!
       redirect_to user_workouts_path(current_user)
-      # render json: "Success this works"
     else
-      # flash[:error]= "could not locate that workout history"
-      # redirect_to new_exercise_path
-       render json: "something went wrong"
+       redirect_to user_workouts_path(current_user)
     end
   end
 
