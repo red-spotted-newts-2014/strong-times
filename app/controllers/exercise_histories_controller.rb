@@ -54,11 +54,7 @@ class ExerciseHistoriesController < ApplicationController
   private
 
   def exercise_history_params
-<<<<<<< HEAD
     params.require(:exercise_history).permit(:weight, :reps, :rest_time, :distance, :running_time, :exercise_id)
-=======
-    params.require(:exercise_history).permit(:weight, :reps, :rest_time, :distance, :running_time, :workout_history_id, :exercise_id)
->>>>>>> upstream/master
   end
 
 end
