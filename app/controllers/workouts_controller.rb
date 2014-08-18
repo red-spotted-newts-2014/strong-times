@@ -11,12 +11,10 @@ class WorkoutsController < ApplicationController
   end
 
   def show
-    puts "here1"
     @workout = Workout.find(params[:id])
-    puts "here"
     respond_to do |format|
         format.json { render :json => { :workout_specs => @workout.send_specs } }
-      end 
+      end
   end
 
   def create

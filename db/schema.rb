@@ -17,26 +17,22 @@ ActiveRecord::Schema.define(version: 20140817152057) do
   enable_extension "plpgsql"
 
   create_table "exercise_histories", force: true do |t|
-    t.integer  "weight"
-    t.integer  "reps"
-    t.string   "rest_time"
-    t.integer  "distance"
-    t.string   "running_time"
-    t.integer  "workout_history_id"
+    t.string   "name"
+    t.string   "sets"
+    t.string   "reps"
+    t.string   "weight"
+    t.string   "tempo"
     t.integer  "exercise_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "exercises", force: true do |t|
-    t.string   "workout_type"
     t.string   "name"
-    t.integer  "weight"
-    t.integer  "reps"
-    t.string   "rest_time"
+    t.string   "sets"
+    t.string   "reps"
+    t.string   "weight"
     t.string   "tempo"
-    t.integer  "distance"
-    t.string   "running_time"
     t.integer  "workout_id"
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -59,13 +55,6 @@ ActiveRecord::Schema.define(version: 20140817152057) do
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
-
-  create_table "workout_histories", force: true do |t|
-    t.integer  "user_id"
-    t.integer  "workout_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
 
   create_table "workouts", force: true do |t|
     t.string   "name"

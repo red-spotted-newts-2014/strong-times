@@ -1,9 +1,4 @@
-<%= @workout.name %> <br/><br/>
-
-Create a New Exercise
-
-<!-- NEED AJAX  DO THIS -->
-<%= form_for @exercise, url: {action: "create"} do |f| %>
+<%= form_for @exercise_history, url: {action: "create"} do |f| %>
   Name :<%= f.text_field :name %> <br/>
   Sets :<%= f.text_field :sets %> <br/>
   Reps :  <%= f.text_field :reps %> <br/>
@@ -12,12 +7,3 @@ Create a New Exercise
 
   <%= f.submit "Create" %>
 <% end %>
-
-
-
-
-
-
-
-
-

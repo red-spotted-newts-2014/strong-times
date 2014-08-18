@@ -1,28 +1,24 @@
 require 'json'
 
 class ExerciseHistoriesController < ApplicationController
-  # before_action :authenticate_user!
+  before_action :authenticate_user!
 
   def index
     @exercise_histories = ExerciseHistory.all
   end
 
-  def show
-    @exercise_history = ExerciseHistory.find(params[:id])
+  def new
+    @exercise_history = ExerciseHistory.new
+    @workout = Exercise.find(params[:exercise_id])
   end
 
   def create
-    @exercise_history = ExerciseHistory.new(exercise_history_params)
+    exercise = Exercise.find(params[:exercise_id])
+    @exercise_history = exercise.exercise_histories.build(exercise_history_params)
     if @exercise_history.save
-      respond_to do |format|
-        format.html
-        format.json { render :json => { :exercise_history => @exercise_history.id } }
-      end
+      redirect_to user_workouts_path(current_user)
     else
-      respond_to do |format|
-        format.html
-        format.json { render :json => { :error => "No exercise Logged" } }
-      end
+      redirect_to user_workouts_path(current_user)
     end
   end
 
@@ -40,7 +36,7 @@ class ExerciseHistoriesController < ApplicationController
   private
 
   def exercise_history_params
-    params.require(:exercise_history).permit(:weight, :reps, :rest_time, :distance, :running_time, :workout_history_id, :exercise_id)
+    params.require(:exercise_history).permit(:weight, :reps, :rest_time, :distance, :running_time)
   end
 
 end

@@ -5,7 +5,6 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
   has_many :workouts
-  has_many :workout_histories
   has_many :exercises, through: :workouts
-  has_many :exercise_histories, through: :workout_histories
+  has_many :exercise_histories, through: :workouts
 end
