@@ -5,16 +5,11 @@ Rails.application.routes.draw do
   get '/', to: 'welcome#index'
   get 'users/:id' => 'users#show', as: :user
 
-  get '/test_api_call', :to => 'exercises#test_api_call'
-
-
   shallow do
     resources :users do
       resources :workouts do
         resources :exercises do
-          resources :workout_histories do
-            resources :exercise_histories
-          end
+          resources :exercise_histories
         end
       end
     end

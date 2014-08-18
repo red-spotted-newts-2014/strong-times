@@ -19,7 +19,6 @@ class WorkoutsController < ApplicationController
 
   def create
     @workout = current_user.workouts.build(workout_params)
-    WorkoutHistory.create(@workout.id)
     if @workout.save!
       redirect_to new_workout_exercise_path(@workout.id)
     else

@@ -1,7 +1,7 @@
 require 'json'
 
 class ExerciseHistoriesController < ApplicationController
-  # before_action :authenticate_user!
+  before_action :authenticate_user!
 
   def index
     @exercise_histories = ExerciseHistory.all
@@ -9,36 +9,18 @@ class ExerciseHistoriesController < ApplicationController
 
   def new
     @exercise_history = ExerciseHistory.new
-    @workout_history = WorkoutHistory.find(params[:workout_history_id])
+    @workout = Exercise.find(params[:exercise_id])
   end
 
   def create
-    # @exercise_history = ExerciseHistory.find(params[:id])
-    # workout_history = WorkoutHistory.find(params[:workout_history_id])
-
-  @exercise_history = ExerciseHistory.new(exercise_history_params)
+    exercise = Exercise.find(params[:exercise_id])
+    @exercise_history = exercise.exercise_histories.build(exercise_history_params)
     if @exercise_history.save
-      respond_to do |format|
-        format.html
-        format.json { render :json => { :exercise_history => @exercise_history.id } }
-      end
+      redirect_to user_workouts_path(current_user)
     else
-      respond_to do |format|
-        format.html
-        format.json { render :json => { :error => "No exercise Logged" } }
-      end
+      redirect_to user_workouts_path(current_user)
     end
   end
-
-  # def create
-  #   workout_history = WorkoutHistory.find(params[:workout_history_id])
-  #   @exercise_history = workout_history.exercise_histories.build(exercise_history_params)
-  #   if @exercise_history.save!
-  #     redirect_to user_workouts_path(current_user)
-  #   else
-  #     flash[:error]= "could not locate that workout history"
-  #     redirect_to user_workouts_path(current_user)
-  # end
 
   def update
     @exercise_history = ExerciseHistory.find(params[:id])
@@ -54,7 +36,7 @@ class ExerciseHistoriesController < ApplicationController
   private
 
   def exercise_history_params
-    params.require(:exercise_history).permit(:weight, :reps, :rest_time, :distance, :running_time, :exercise_id)
+    params.require(:exercise_history).permit(:weight, :reps, :rest_time, :distance, :running_time)
   end
 
 end
