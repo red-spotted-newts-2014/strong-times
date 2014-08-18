@@ -1,5 +1,5 @@
 class WorkoutsController < ApplicationController
-  before_action :authenticate_user!
+  # before_action :authenticate_user!
 
 
   def index
@@ -12,6 +12,9 @@ class WorkoutsController < ApplicationController
 
   def show
     @workout = Workout.find(params[:id])
+    respond_to do |format|
+        format.json { render :json => { :workout_specs => @workout.send_specs } }
+      end
   end
 
   def create

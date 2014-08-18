@@ -1,5 +1,5 @@
 class WorkoutHistoriesController < ApplicationController
-  before_action :authenticate_user!
+  # before_action :authenticate_user!
 
 
   def index
@@ -16,14 +16,24 @@ class WorkoutHistoriesController < ApplicationController
   end
 
   def create
+
     workout = Workout.find(params[:workout_history_id])
     @workout_history = workout.workout_histories.build(workout_history_params)
     if @workout_history.save!
       redirect_to user_workouts_path(current_user)
-    else
-      flash[:error]= "could not locate that workout history"
-      redirect_to new_workout_history_path
-    end
+# =======
+#     @workout_history = WorkoutHistory.new(workout_history_params)
+    # if @workout_history.save!
+    #   respond_to do |format|
+    #     format.html
+    #     format.json { render :json => { :workout_history_id => @workout_history.id } }
+    #   end
+    # else
+    #   respond_to do |format|
+    #     format.html
+    #     format.json { render :json => { :error => "error: No workout logged" } }
+    #   end
+     end
   end
 
   def update

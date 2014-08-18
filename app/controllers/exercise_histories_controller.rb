@@ -1,7 +1,7 @@
 require 'json'
 
 class ExerciseHistoriesController < ApplicationController
-  before_action :authenticate_user!
+  # before_action :authenticate_user!
 
   def index
     @exercise_histories = ExerciseHistory.all
@@ -12,20 +12,33 @@ class ExerciseHistoriesController < ApplicationController
     @workout_history = WorkoutHistory.find(params[:workout_history_id])
   end
 
-  def show
-    @exercise_history = ExerciseHistory.find(params[:id])
-  end
-
   def create
-     workout_history = WorkoutHistory.find(params[:workout_history_id])
-    @exercise_history = workout_history.exercise_histories.build(exercise_history_params)
-    if @exercise_history.save!
-      redirect_to user_workouts_path(current_user)
+    # @exercise_history = ExerciseHistory.find(params[:id])
+    # workout_history = WorkoutHistory.find(params[:workout_history_id])
+
+  @exercise_history = ExerciseHistory.new(exercise_history_params)
+    if @exercise_history.save
+      respond_to do |format|
+        format.html
+        format.json { render :json => { :exercise_history => @exercise_history.id } }
+      end
     else
-      flash[:error]= "could not locate that workout history"
-      redirect_to user_workouts_path(current_user)
+      respond_to do |format|
+        format.html
+        format.json { render :json => { :error => "No exercise Logged" } }
+      end
     end
   end
+
+  # def create
+  #   workout_history = WorkoutHistory.find(params[:workout_history_id])
+  #   @exercise_history = workout_history.exercise_histories.build(exercise_history_params)
+  #   if @exercise_history.save!
+  #     redirect_to user_workouts_path(current_user)
+  #   else
+  #     flash[:error]= "could not locate that workout history"
+  #     redirect_to user_workouts_path(current_user)
+  # end
 
   def update
     @exercise_history = ExerciseHistory.find(params[:id])
@@ -41,7 +54,11 @@ class ExerciseHistoriesController < ApplicationController
   private
 
   def exercise_history_params
+<<<<<<< HEAD
     params.require(:exercise_history).permit(:weight, :reps, :rest_time, :distance, :running_time, :exercise_id)
+=======
+    params.require(:exercise_history).permit(:weight, :reps, :rest_time, :distance, :running_time, :workout_history_id, :exercise_id)
+>>>>>>> upstream/master
   end
 
 end

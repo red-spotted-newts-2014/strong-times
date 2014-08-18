@@ -7,6 +7,7 @@ Rails.application.routes.draw do
 
   get '/test_api_call', :to => 'exercises#test_api_call'
 
+
   shallow do
     resources :users do
       resources :workouts do
@@ -18,6 +19,7 @@ Rails.application.routes.draw do
       end
     end
   end
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
