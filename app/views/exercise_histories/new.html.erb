@@ -1,0 +1,9 @@
+<%= form_for @exercise_history, url: {action: "create"} do |f| %>
+  Weight:  <%= f.text_field :weight %> <br/>
+  Reps: <%= f.text_field :reps %> <br/>
+  Rest Time: <%= f.text_field :rest_time %> <br/> <br/>
+  Distance: <%= f.text_field :distance %> <br/>
+  Running-Time: <%= f.text_field :running_time %> <br/>
+
+  <%= f.submit "Create" %>
+<% end %>

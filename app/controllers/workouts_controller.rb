@@ -11,16 +11,15 @@ class WorkoutsController < ApplicationController
   end
 
   def show
-    puts "here1"
     @workout = Workout.find(params[:id])
-    puts "here"
     respond_to do |format|
         format.json { render :json => { :workout_specs => @workout.send_specs } }
-      end 
+      end
   end
 
   def create
     @workout = current_user.workouts.build(workout_params)
+    WorkoutHistory.create(@workout.id)
     if @workout.save!
       redirect_to new_workout_exercise_path(@workout.id)
     else
