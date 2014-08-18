@@ -11,6 +11,7 @@
     <% current_user.workouts.each do |workout| %>
      <tr style="height:50px">
         <td style="width:100px"> <%= workout.name %>
+
           <%= link_to "Add A New Exercise To Workout",  new_workout_exercise_path(workout.id) %></td>
           <% workout.exercises.each do |x| %>
             <td style="width:100px"><%= x.name %></td>

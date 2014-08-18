@@ -10,7 +10,11 @@ Rails.application.routes.draw do
   shallow do
     resources :users do
       resources :workouts do
-        resources :exercises
+        resources :exercises do
+          resources :workout_histories do
+            resources :exercise_histories
+          end
+        end
       end
     end
   end

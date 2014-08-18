@@ -7,17 +7,23 @@ class ExerciseHistoriesController < ApplicationController
     @exercise_histories = ExerciseHistory.all
   end
 
+  def new
+    @exercise_history = ExerciseHistory.new
+    @workout_history = WorkoutHistory.find(params[:workout_history_id])
+  end
+
   def show
     @exercise_history = ExerciseHistory.find(params[:id])
   end
 
   def create
-    @exercise_history = ExerciseHistory.new(params[:exercise_history])
+     workout_history = WorkoutHistory.find(params[:workout_history_id])
+    @exercise_history = workout_history.exercise_histories.build(exercise_history_params)
     if @exercise_history.save!
-      redirect_to exercise_history_path
+      redirect_to user_workouts_path(current_user)
     else
       flash[:error]= "could not locate that workout history"
-      redirect_to new_exercise_history_path
+      redirect_to user_workouts_path(current_user)
     end
   end
 
@@ -35,7 +41,7 @@ class ExerciseHistoriesController < ApplicationController
   private
 
   def exercise_history_params
-    params.require[:exercise_history].permit[:weight, :reps, :rest_time, :distance, :running_time, :exercise_id]
+    params.require(:exercise_history).permit(:weight, :reps, :rest_time, :distance, :running_time, :exercise_id)
   end
 
 end
