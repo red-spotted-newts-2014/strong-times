@@ -16,6 +16,10 @@ $rgba-primary-6: rgba( 47, 92,114,0.7);
 $rgba-primary-0: rgba(122,154,170,0.3);
 
 
+body{
+background-color: $rgba-primary-0;
+}
+
 .container{
   margin: auto;
   max-width: 90em;

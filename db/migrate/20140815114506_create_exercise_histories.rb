@@ -8,6 +8,7 @@ class CreateExerciseHistories < ActiveRecord::Migration
       t.string :tempo
 
       t.references :exercise
+      t.references :workout
 
       t.timestamps
     end

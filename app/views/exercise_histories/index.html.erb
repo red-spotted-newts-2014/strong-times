@@ -1,5 +1,15 @@
 
+
 <div class="svg-container">
         <%= image_tag 'abs.svg', :id => "abs"%>
 
 </div>
+
+EXERCISE HISTORY
+
+<% current_user.exercises.each do |exercise| %>
+  <% exercise.exercise_histories.each do |p| %>
+    <%= p.reps %>
+  <% end %>
+<% end %>
+
