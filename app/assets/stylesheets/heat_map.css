@@ -1,10 +1,10 @@
 body{
-/*	/*background: url("human-muscle-anatomy.jpg");*/
-	background-repeat: no-repeat;
-	background-size: 50%;
-	background-position: center;
-	height: 900px;
-	overflow: hidden;*/
+
+	
+	
+}
+.exercise_performance{
+	z-index: 20;
 }
 
 #abs{

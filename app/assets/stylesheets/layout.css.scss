@@ -25,7 +25,7 @@ nav {
     font-family: initial;
     float: left;
     padding-left: 35px;
-  };
+  }
 
   #logo a {
     text-decoration: none;
@@ -45,6 +45,50 @@ nav {
     margin-top: 7px;
   }
 }
+
+.exercise_form_div{
+  width: 70em;
+  margin-left: 5em;
+
+}
+.exercise_form_container{
+  width: 100%;
+}
+
+.exercise_form_new{
+
+}
+.exercise_container{
+  width:70em;
+  margin: auto;
+}
+.exercise_form_div ul li{
+  list-style-type: none;
+  display: inline-block;
+}
+#exercise_table{
+  margin-top: 5em;
+  margin-left: 5em;
+}
+
+#name{
+  width: 10em;
+}
+
+#sets{
+  width: 5em;
+}
+#reps{
+  width: 5em;
+}
+
+#weight{
+  width: 5em;
+}
+#tempo{
+  width: 5em;
+}
+
 
 
 
