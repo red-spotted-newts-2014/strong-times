@@ -1,9 +1,11 @@
 
 <%= render 'shared/search' %>
-<% @exercises.each do |exercise| %>
 <div class="search_container">
-	<table class="search_table">
-		<tr class="search_row"><%= exercise.name %></tr>
-	</table>
-</div>
+<table class="search_table">
+	<tbody>
+<% @exercises.each do |exercise| %>
+		<tr class="search_row" style="display: none"><td><%= exercise.name %></td></tr>
 <% end %>
+</tbody>
+</table>
+</div>

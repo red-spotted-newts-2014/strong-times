@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   get '/', to: 'welcome#index'
   get 'users/:id' => 'users#show', as: :user
 
- git '/exercises' => 'exercises#index'
+ get '/exercises' => 'exercises#index'
 
   shallow do
     resources :users do
