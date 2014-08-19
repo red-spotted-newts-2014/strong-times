@@ -16,6 +16,48 @@ body{
   opacity: .3;
 }
 
+#chest{
+  position: absolute;
+  /*background-image: url('abs.svg');*/
+  top: 0px;
+  left: 175px;
+  height: 26%;
+  opacity: .7;
+}
+#leftBisep{
+  position: absolute;
+  /*background-image: url('abs.svg');*/
+  top: 0px;
+  left: 175px;
+  height: 26%;
+  opacity: .4;
+}
+#rightBisep{
+  position: absolute;
+  /*background-image: url('abs.svg');*/
+  top: 0px;
+  left: 175px;
+  height: 26%;
+  opacity: .4;
+}
+#shoulders{
+  position: absolute;
+  /*background-image: url('abs.svg');*/
+  top: 0px;
+  left: 175px;
+  height: 26%;
+  opacity: .4;
+}
+#thighs{
+  position: absolute;
+  /*background-image: url('abs.svg');*/
+  top: 0px;
+  left: 175px;
+  height: 26%;
+  opacity: .4;
+}
+
+
 .svg-container {
 	background: url("human-muscle-anatomy.jpg");
 	background-repeat: no-repeat;
