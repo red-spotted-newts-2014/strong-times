@@ -46,16 +46,23 @@ nav {
   }
 }
 
-.exercise_form_new{
+.exercise_form_div{
   width: 70em;
 }
-.exercise_form_new ul li{
+
+.exercise_form_new{
+
+}
+
+.exercise_form_div ul li{
   list-style-type: none;
   display: inline-block;
 }
+
 #name{
   width: 10em;
 }
+
 #exercise_input{
   width: 5em;
 }
