@@ -2,8 +2,8 @@
 <% current_user.workouts.each do |workout| %>
   <%= link_to "#{workout.name}", edit_workout_path(current_user.id) %><br/>
   <%= link_to "Add A New Exercise To Workout",  new_workout_exercise_path(workout.id) %><br/>
-  <% workout.exercises.each do |x| %>
-    <%= x.name %>
+  <% workout.exercises.each do |exercise| %>
+    <%= link_to "#{exercise.name}", new_exercise_exercise_history_path(exercise.id) %>
   <% end %><br/><br/>
 <% end %>
 
