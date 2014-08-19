@@ -1,9 +1,12 @@
-<%= link_to "create new workout", new_user_workout_path  %><br/>
+<%= link_to "create new workout", new_user_workout_path  %><br/><br/>
+
+Your Workouts <br/><br/>
 <% current_user.workouts.each do |workout| %>
   <%= link_to "#{workout.name}", edit_workout_path(current_user.id) %><br/>
-  <%= link_to "Add A New Exercise To Workout",  new_workout_exercise_path(workout.id) %><br/>
+  <%= link_to "Add A New Exercise(create ajax form here)",  new_workout_exercise_path(workout.id) %><br/>
+  EXERCISES (Make div that expands with exercises on click)<br/>
   <% workout.exercises.each do |exercise| %>
-    <%= link_to "#{exercise.name}", new_exercise_exercise_history_path(exercise.id) %>
+    <%= link_to "Do #{exercise.name}", new_exercise_exercise_history_path(exercise.id) %>
   <% end %><br/><br/>
 <% end %>
 
