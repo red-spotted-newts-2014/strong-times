@@ -17,5 +17,6 @@ Rails.application.routes.draw do
     end
   end
 
+get '/timer' => 'timers#show'
 
 end
