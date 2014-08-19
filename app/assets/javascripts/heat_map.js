@@ -8,8 +8,6 @@ document.addEventListener('DOMContentLoaded', function(){
 	svgBodyElements.shoulders()
 	svgBodyElements.thighs()
 
-
-
 });
 
 
