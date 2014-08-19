@@ -25,7 +25,7 @@ nav {
     font-family: initial;
     float: left;
     padding-left: 35px;
-  };
+  }
 
   #logo a {
     text-decoration: none;
@@ -44,6 +44,20 @@ nav {
     font-size: 1.2em;
     margin-top: 7px;
   }
+}
+
+.exercise_form_new{
+  width: 70em;
+}
+.exercise_form_new ul li{
+  list-style-type: none;
+  display: inline-block;
+}
+#name{
+  width: 10em;
+}
+#exercise_input{
+  width: 5em;
 }
 
 

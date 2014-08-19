@@ -3,15 +3,40 @@
 Create a New Exercise
 
 <!-- NEED AJAX  DO THIS -->
+<div class="exercise_form_new">
 <%= form_for @exercise, url: {action: "create"} do |f| %>
-  Name :<%= f.text_field :name %> <br/>
-  Sets :<%= f.text_field :sets %> <br/>
-  Reps :  <%= f.text_field :reps %> <br/>
-  Weight <%= f.text_field :weight %> <br/>
-  Tempo <%= f.text_field :tempo %> <br/>
+ <ul>
+	 <li>  Name <%= f.text_field :name, :id => "name" %> </li>
+	 <li>  Sets <%= f.text_field :sets, :id => "exercise_input"%> </li>
+	 <li>  Reps <%= f.text_field :reps, :id => "exercise_input" %> </li>
+	 <li>  Weight <%= f.text_field :weight,:id => "exercise_input" %></li>
+	 <li>  Tempo <%= f.text_field :tempo, :id => "exercise_input" %></li>
 
-  <%= f.submit "Create" %>
+	 <li> <%= f.submit "Create" %></li>
+</ul>
 <% end %>
+</div>
+
+<table style="width:900px">
+	<th>
+		<tr>
+		<td>Name</td>
+		<td>Sets</td>
+		<td>Reps</td>
+		<td>Weight</td>
+		<td>Tempo</td>
+	</tr>
+	</th>
+	<tbody>
+		<tr>
+			<td>Chest</td>
+			<td>2</td>
+			<td>12</td>
+			<td>125</td>
+			<td>5040</td>	
+		</tr>	
+	</tbody>	
+</table>
 
 
 
