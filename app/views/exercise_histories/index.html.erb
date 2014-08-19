@@ -1,0 +1,21 @@
+
+
+<div class="svg-container">
+        <!-- <%= image_tag 'abs.svg', :id => "abs"%> -->
+
+</div>
+
+EXERCISE HISTORY
+
+<% current_user.exercises.each do |exercise| %>
+  <%= exercise.name %>
+  <% exercise.exercise_histories.each do |p| %>
+    ADD DATE OF EXERCISE USING DATE/TIME THING
+    <%= p.name %><br/>
+    <%= p.sets %><br/>
+    <%= p.reps %><br/>
+    <%= p.weight %><br/>
+    <%= p.tempo %><br/>
+  <% end %>
+<% end %>
+

@@ -1,25 +1,20 @@
+<div class="welcomeIndex">
+  <span class="welcomeLogo">WELCOME TO REST-LESS</span>
+  <h1>Hold Yourself Accountable For Your Goals</h1>
 
-
-
-<h2>WELCOME TO REST-LESS</h2>
-
-<div class="optionsBox">
-<% if user_signed_in? %>
-<ul>
-  Do You Want to: <br/>
-  <li><%= link_to "Create A New Workout", new_user_workout_path(current_user) %></li>
-  <li><%= link_to "View All Workouts", user_workouts_path(current_user) %><br/></li>
-  <li><%= link_to "View workout history"  %></li>
-</ul>
-<% else %>
-  Please Log In Or Sign Up To Track Your Exercises Today
-   <%= button_to('Login', new_user_session_path, :method => "get")  %>
-   <%= button_to('Sign Up', new_user_registration_path, :method => "get") %>
-
-<% end %>
-</div>
-
-
-<div class="appDescription">
-  <p>app description</p>
+  <div class="optionsBox">
+    <% if user_signed_in? %>
+      <ul>
+        Do You Want to: <br/>
+       <li><%= link_to "Create A New Workout", new_user_workout_path(current_user) %></li>
+      <li><%= link_to "View All Workouts", user_workouts_path(current_user) %><br/></li></li>
+     </ul>
+    <% else %>
+      <h3>Log In Or Sign Up To Track Your Exercises Today</h3>
+    <div class="welcomeButtons">
+      <%= button_to('Login', new_user_session_path, :method => "get")  %>
+      <%= button_to('Sign Up', new_user_registration_path, :method => "get") %>
+    </div>
+    <% end %>
+  </div>
 </div>

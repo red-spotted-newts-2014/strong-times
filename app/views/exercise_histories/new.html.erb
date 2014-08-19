@@ -1,5 +1,13 @@
+GOALS FOR <%= @exercise.name %> <br/><br/>
+SETS: <%= @exercise.sets %> <br/>
+REPS: <%= @exercise.reps %> <br/>
+WEIGHT: <%= @exercise.weight %> <br/>
+TEMPO: <%= @exercise.tempo %> <br/><br/>
+
+
+
+Achieved
 <%= form_for @exercise_history, url: {action: "create"} do |f| %>
-  Name :<%= f.text_field :name %> <br/>
   Sets :<%= f.text_field :sets %> <br/>
   Reps :  <%= f.text_field :reps %> <br/>
   Weight <%= f.text_field :weight %> <br/>

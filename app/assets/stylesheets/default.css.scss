@@ -15,34 +15,14 @@ $rgba-primary-4: rgba( 47, 92,114,1);
 $rgba-primary-6: rgba( 47, 92,114,0.7);
 $rgba-primary-0: rgba(122,154,170,0.3);
 
+
 body{
 background-color: $rgba-primary-0;
 }
-
-nav {
-
-}
-
-
 
 .container{
   margin: auto;
   max-width: 90em;
   height: 61.2em;
-  background-color: $rgba-primary-6;
-  background-image: url(tired.jpg);
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
 }
 
-.optionsBox{
-  padding: 1em;
-  width: 40em;
-  height: 7em;
-  background-color: $rgba-primary-6;
-  margin-left: 10em;
-}
-.optionsBox ul li{
-  list-style-type: none;
-  display: inline-block;
-}

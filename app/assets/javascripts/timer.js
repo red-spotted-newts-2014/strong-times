@@ -21,7 +21,7 @@ $(document).ready(function() {
         clearInterval(timer)
       }
       time--
-    }
+    }git
   });
 });
 

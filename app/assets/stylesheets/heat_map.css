@@ -1,0 +1,84 @@
+body{
+/*	/*background: url("human-muscle-anatomy.jpg");*/
+	background-repeat: no-repeat;
+	background-size: 50%;
+	background-position: center;
+	height: 900px;
+	overflow: hidden;*/
+}
+
+#abs{
+  position: absolute;
+  /*background-image: url('abs.svg');*/
+  top: 0px;
+  left: 175px;
+  height: 26%;
+  opacity: .3;
+}
+
+#chest{
+  position: absolute;
+  /*background-image: url('abs.svg');*/
+  top: 0px;
+  left: 175px;
+  height: 26%;
+  opacity: .7;
+}
+#leftBisep{
+  position: absolute;
+  /*background-image: url('abs.svg');*/
+  top: 0px;
+  left: 175px;
+  height: 26%;
+  opacity: .4;
+}
+#rightBisep{
+  position: absolute;
+  /*background-image: url('abs.svg');*/
+  top: 0px;
+  left: 175px;
+  height: 26%;
+  opacity: .4;
+}
+#shoulders{
+  position: absolute;
+  /*background-image: url('abs.svg');*/
+  top: 0px;
+  left: 175px;
+  height: 26%;
+  opacity: .4;
+}
+#thighs{
+  position: absolute;
+  /*background-image: url('abs.svg');*/
+  top: 0px;
+  left: 175px;
+  height: 26%;
+  opacity: .4;
+}
+
+
+.svg-container {
+	background: url("human-muscle-anatomy.jpg");
+	background-repeat: no-repeat;
+	background-size: 45%;
+	background-position: center top;
+	height: 900px;
+	overflow: hidden;
+
+	display: inline-block;
+	position: relative;
+	width: 100%;
+	padding-bottom: 100%;
+	vertical-align: middle;
+	overflow: hidden;
+}
+
+.svg-container {
+	display: inline-block;
+	position: relative;
+	width: 100%;
+	padding-bottom: 100%;
+	vertical-align: middle;
+	overflow: hidden;
+}

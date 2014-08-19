@@ -1,0 +1,36 @@
+body{
+	background: url("human-muscle-anatomy.jpg");
+	background-repeat: no-repeat;
+	background-size: 50%;
+	background-position: center top;
+	height: 900px;
+	overflow: hidden;
+}
+
+#abs{
+  position: absolute;
+  /*background-image: url('abs.svg');*/
+  top: -10px;
+  left: 230px;
+  height: 34%;
+  opacity: .3;
+  fill:black;
+}
+
+.svg-container {
+	display: inline-block;
+	position: relative;
+	width: 100%;
+	padding-bottom: 100%;
+	vertical-align: middle;
+	overflow: hidden;
+}
+
+.svg-container {
+	display: inline-block;
+	position: relative;
+	width: 100%;
+	padding-bottom: 100%;
+	vertical-align: middle;
+	overflow: hidden;
+}
