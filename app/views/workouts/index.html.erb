@@ -7,6 +7,54 @@ Your Workouts <br/><br/>
   EXERCISES (Make div that expands with exercises on click)<br/>
   <% workout.exercises.each do |exercise| %>
     <%= link_to "Do #{exercise.name}", new_exercise_exercise_history_path(exercise.id) %>
-  <% end %><br/><br/>
+  <% end %>
 <% end %>
+
+<h1><%= @workout.name %></h1>
+
+Create a New Exercise
+
+<!-- NEED AJAX  DO THIS -->
+
+<div class= "exercise_container">
+  <div class="exercise_form_container">
+    <div class="exercise_form_div">
+
+      <%= form_for @exercise, url: {action: "create"} do |f| %>
+         Name <%= f.text_field :name, :id => "name", :placeholder => "exercise name", :require => true %>
+         Sets <%= f.text_field :sets, :id => "sets"%>
+         Reps <%= f.text_field :reps, :id => "reps" %>
+         Weight <%= f.text_field :weight,:id => "weight" %>
+         Tempo <%= f.text_field :tempo, :id => "tempo" %>
+         <%= f.submit "Create" %>
+      <% end %>
+    </div>
+  </div>
+  <table style="width:900px" id="exercise_table">
+    <th>
+      <tr>
+      <td>Name</td>
+      <td>Sets</td>
+      <td>Reps</td>
+      <td>Weight</td>
+      <td>Tempo</td>
+    </tr>
+    </th>
+    <tbody id="exercise_table_body">
+      <% @workout.exercises.each do |exercise|%>
+         <tr>
+            <td><%= link_to " Do #{exercise.name}", exercise_exercise_histories_path(exercise.id)%></td>
+            <td><%= exercise.sets%></td>
+            <td><%= exercise.reps%></td>
+            <td><%= exercise.weight%></td>
+            <td><%= exercise.tempo%></td>
+         </tr>
+         <%end%>
+      </tbody>
+  </table>
+</div>
+
+
+
+
 

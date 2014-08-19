@@ -19,7 +19,7 @@ class ExercisesController < ApplicationController
     workout = Workout.find(params[:workout_id])
     @exercise = workout.exercises.build(exercise_params)
     if @exercise.save
-        render json: @exercise.to_json 
+        render json: @exercise.to_json
     else
       render json: "failed".to_json
     end
