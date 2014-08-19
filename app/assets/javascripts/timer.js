@@ -1,13 +1,19 @@
+var time
+$(document).ready(function() {
 
-var seconds = 10;
+  $(".timer_button").on('click', function(event) {
+    event.preventDefault();
 
-function timerBody() {
-  seconds--
- console.log(seconds)
-if (seconds === 0) {
-  clearInterval(timer)
-}
-}
+    time = $(".timer_input").val()
 
-timer = setInterval( timerBody, 1000
-  )
+    var timeFunc = function(){timerBody(time)}
+    var timer = setInterval( timeFunc, 1000)
+    function timerBody(seconds) {
+      if (seconds === 0) {
+        clearInterval(timer)
+      }
+      time--
+    }
+  });
+});
+
