@@ -1,22 +1,9 @@
 <%= link_to "create new workout", new_user_workout_path  %><br/>
+<% current_user.workouts.each do |workout| %>
+  <%= link_to "#{workout.name}", edit_workout_path(current_user.id) %><br/>
+  <%= link_to "Add A New Exercise To Workout",  new_workout_exercise_path(workout.id) %><br/>
+  <% workout.exercises.each do |exercise| %>
+    <%= link_to "#{exercise.name}", new_exercise_exercise_history_path(exercise.id) %>
+  <% end %><br/><br/>
+<% end %>
 
-<%= render partial: "search" %>
-<table style="border:1px solid black width:900px">
-  <th>
-    <td>Workout</td>
-    <td>exercise</td>
-    <td>exercise</td>
-  </th>
-  <tbody style="border:1px solid black width:900px">
-    <% current_user.workouts.each do |workout| %>
-     <tr style="height:50px">
-        <td style="width:100px"> <%= workout.name %>
-
-          <%= link_to "Add A New Exercise To Workout",  new_workout_exercise_path(workout.id) %></td>
-          <% workout.exercises.each do |x| %>
-            <td style="width:100px"><%= x.name %></td>
-          <% end %>
-     </tr>
-    <% end %>
-  </tbody>
-</table>
