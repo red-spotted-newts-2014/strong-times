@@ -9,14 +9,14 @@ class ExerciseHistoriesController < ApplicationController
 
   def new
     @exercise_history = ExerciseHistory.new
-    @workout = Exercise.find(params[:exercise_id])
+    @exercise = Exercise.find(params[:exercise_id])
   end
 
   def create
     exercise = Exercise.find(params[:exercise_id])
     @exercise_history = exercise.exercise_histories.build(exercise_history_params)
     if @exercise_history.save
-      redirect_to user_workouts_path(current_user)
+      redirect_to exercise_exercise_histories_path(params[:exercise_id])
     else
       redirect_to user_workouts_path(current_user)
     end

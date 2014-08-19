@@ -1,0 +1,7 @@
+EXERCISE HISTORY
+
+<% current_user.exercises.each do |exercise| %>
+  <% exercise.exercise_histories.each do |p| %>
+    <%= p.reps %>
+  <% end %>
+<% end %>

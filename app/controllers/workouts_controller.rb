@@ -27,11 +27,15 @@ class WorkoutsController < ApplicationController
     end
   end
 
+  def edit
+    @workout = Workout.find(params[:id])
+  end
+
   def update
     @workout = Workout.find(params[:id])
 
-    if @workout.update(params[:workout_params])
-      redirect_to exercise_path
+    if @workout.update(workout_params)
+      redirect_to user_workouts_path(params[:id])
     else
       flash[:error]= "could not locate that workout history"
       redirect_to edit_workout_path
@@ -41,7 +45,7 @@ class WorkoutsController < ApplicationController
   def destroy
     @workout = Workout.find(params[:id])
     @workout.destroy
-    redirect_to workout_path
+    redirect_to user_workout_path(params[:id])
   end
 
   private
