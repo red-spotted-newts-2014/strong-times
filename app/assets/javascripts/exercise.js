@@ -5,21 +5,23 @@ document.addEventListener('DOMContentLoaded', function(){
 });
 
 function appendExercise(event){
-	event.preventDefault();
+	 event.preventDefault();
 	if (event.target.name === "commit"){
 	var params = []
 	var form = document.querySelector("#new_exercise")
 	var fm = form.querySelectorAll("input")	
-	appendExerciseTable(fm)
-	// $.ajax({
- //    url:"/workouts/31/exercises",
- //    method:"POST",
- //    data: {name: fm[0].value, sets: fm[1].value, reps: fm[2].value, weight: fm[3].value, tempo: fm[4].value  },
- //    dataType: 'json'
- //  }).success(function(data) {
- //    appendExerciseTable(data);
- //  }).fail(function(){console.log("FAILURE")})
-	}//end if statent
+	// appendExerciseTable(fm)
+	console.log(fm)
+	 var block = {exercise:{name: fm[2].value, sets: fm[3].value, reps: fm[4].value, weight: fm[5].value, tempo: fm[6].value  }}
+	 $.ajax({
+    url:"/workouts/31/exercises",
+     method:"POST",
+     data: block,
+     dataType: 'json'
+   }).done(function(data) {
+     appendExerciseTable(fm);
+  }).fail(function(){console.log("FAILURE")})
+	}//end if statement
 }
 
 function appendExerciseTable(fm){
