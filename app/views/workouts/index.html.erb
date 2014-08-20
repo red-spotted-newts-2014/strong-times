@@ -1,21 +1,26 @@
 <div class="workoutsIndex">
   <div class="left">
     <h1><u>YOUR WORKOUTS</u></h1>
-    <span class="centerLink"><%= link_to "CREATE NEW", new_user_workout_path, :class => "newWorkout" %></span><br/><br/>
+    <span class="centerLink"><%= link_to "CREATE NEW WORKOUT", new_user_workout_path, :class => "newWorkout" %></span><br/><br/>
 
     <% current_user.workouts.each do |workout| %>
       <table>
         <th colspan="2"><span class="workoutTitle"><%= workout.name %></span></th>
         <tr>
-          <td><%= link_to "WORKOUT", workout_path(workout.id) %></td>
+          <td><%= link_to "WORKOUT NOW", workout_path(workout.id) %></td>
           <td><%= link_to "ADD EXERCISE", new_workout_exercise_path(workout.id) %></td>
         </tr>
      </table>
     <% end %>
   </div>
 
-  <div class="right">
-    WHAT SHOULD GO HERE
+  <div class="center">
+    <h1><u>WORKOUT HISTORY</u></h1>
+      <% current_user.workouts.each do |workout| %>
+        <% workout.exercises.each do |exercise| %>
+          <%= exercise.name %>
+        <% end %>
+      <% end %>
   </div>
 </div>
 
