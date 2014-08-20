@@ -11,6 +11,13 @@ document.addEventListener('DOMContentLoaded', function(){
 	svgBodyElements.rightBisep()
 	svgBodyElements.shoulders()
 	svgBodyElements.thighs()
+	
+	svgBodyElements.calves()
+	svgBodyElements.glutes()
+	svgBodyElements.triceps()
+	svgBodyElements.back()
+
+
 });
 
 
@@ -58,6 +65,34 @@ var svgBodyElements = (function (){
 			img.setAttribute("src", "/assets/thighs.svg")
 			img.id="thighs";
 			svg.appendChild(img)
+	  },
+	   back: function(){
+			var svg = document.querySelector(".svg-container")
+			var img = document.createElement("img")
+			img.setAttribute("src", "/assets/back.svg")
+			img.id="back";
+			svg.appendChild(img)
+	  },
+	   calves: function(){
+			var svg = document.querySelector(".svg-container")
+			var img = document.createElement("img")
+			img.setAttribute("src", "/assets/calves.svg")
+			img.id="calves";
+			svg.appendChild(img)
+	  },
+	   glutes: function(){
+			var svg = document.querySelector(".svg-container")
+			var img = document.createElement("img")
+			img.setAttribute("src", "/assets/glutes.svg")
+			img.id="glutes";
+			svg.appendChild(img)
+	  },
+	  triceps: function(){
+			var svg = document.querySelector(".svg-container")
+			var img = document.createElement("img")
+			img.setAttribute("src", "/assets/triceps.svg")
+			img.id="triceps";
+			svg.appendChild(img)
 	  }
-  };
+	}  
 })();

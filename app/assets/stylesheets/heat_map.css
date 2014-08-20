@@ -9,7 +9,6 @@ body{
 
 #abs{
   position: absolute;
-  /*background-image: url('abs.svg');*/
   top: 0px;
   left: 175px;
   height: 26%;
@@ -18,7 +17,6 @@ body{
 
 #chest{
   position: absolute;
-  /*background-image: url('abs.svg');*/
   top: 0px;
   left: 175px;
   height: 26%;
@@ -26,7 +24,6 @@ body{
 }
 #leftBisep{
   position: absolute;
-  /*background-image: url('abs.svg');*/
   top: 0px;
   left: 175px;
   height: 26%;
@@ -34,7 +31,6 @@ body{
 }
 #rightBisep{
   position: absolute;
-  /*background-image: url('abs.svg');*/
   top: 0px;
   left: 175px;
   height: 26%;
@@ -42,7 +38,6 @@ body{
 }
 #shoulders{
   position: absolute;
-  /*background-image: url('abs.svg');*/
   top: 0px;
   left: 175px;
   height: 26%;
@@ -50,13 +45,42 @@ body{
 }
 #thighs{
   position: absolute;
-  /*background-image: url('abs.svg');*/
   top: 0px;
   left: 175px;
   height: 26%;
   opacity: .4;
 }
 
+#back{
+  position: absolute;
+  top: -2px;
+  left: 175px;
+  height: 26%;
+  opacity: .4;
+}
+#calves{
+  position: absolute;
+  top: 0px;
+  left: 175px;
+  height: 26%;
+  opacity: .7;
+}
+
+#glutes{
+  position: absolute;
+  top: 0px;
+  left: 175px;
+  height: 26%;
+  opacity: .5;
+}
+
+#triceps{
+  position: absolute;
+  top: 0px;
+  left: 175px;
+  height: 26%;
+  opacity: .8;
+}
 
 .svg-container {
 	background: url("human-muscle-anatomy.jpg");
