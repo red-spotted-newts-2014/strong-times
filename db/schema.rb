@@ -23,6 +23,7 @@ ActiveRecord::Schema.define(version: 20140817152057) do
     t.string   "weight"
     t.string   "tempo"
     t.integer  "exercise_id"
+    t.integer  "workout_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
