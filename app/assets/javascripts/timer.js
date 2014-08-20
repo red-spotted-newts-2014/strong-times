@@ -4,7 +4,8 @@ $(document).ready(function() {
   $(".timer_button").on('click', function(event) {
     event.preventDefault();
     time = $(".timer_input").val()
-
+    $('#toggler').attr('checked', true)
+    console.log(time)
     var timeFunc = function(){
     var min = Math.floor(time/60);
     var secs = Math.floor((time-(60*min))/10);
@@ -19,9 +20,10 @@ $(document).ready(function() {
       console.log(seconds)
       if (seconds === 0) {
         clearInterval(timer)
+        $('#toggler').attr('checked', false)
       }
       time--
-    }git
+    }
   });
 });
 
