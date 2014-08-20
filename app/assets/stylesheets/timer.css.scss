@@ -1,0 +1,96 @@
+.rest_timer {
+font-size: 2.25em;
+position: relative;
+float: right;
+margin: 20px;
+}
+
+/**, *:before, *:after {
+  box-sizing: border-box;
+}*/
+/*html,
+body {
+  height: 100%;
+  position: relative;
+  font-weight: bold;
+}*/
+h1 {
+  line-height: 1em;
+}
+p {
+  margin: 0;
+  line-height: 2em;
+}
+.modal-toggler {
+  display: none;
+}
+.modal {
+  position: absolute;
+  top: 20%;
+  left: 90%;
+  padding: 2em;
+  border-radius: .5em;
+  transform: translate3d(-50%, -50%, 0);
+  &.close-modal-area {
+    width: 100%;
+    height: 100%;
+  }
+  &.modal-box {
+    background: indianred;
+    text-align: center;
+  }
+  .content & {
+    width: 100%;
+    max-width: 40em;
+  }
+}
+.exercise-container,
+.content {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.exercise-container {
+  background: rgba(black, .75);
+  opacity: 0;
+  color: white;
+  visibility: hidden;
+  transition: opacity 1s, visibility 0s linear 1s;
+  z-index: 2;
+  .modal-toggler:checked + & {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 1s;
+  }
+}
+.toggle-modal-button {
+  background-color: transparent;
+  color: white;
+  display: inline-block;
+  padding: 1em;
+  cursor: pointer;
+  border-radius: .5em;
+  box-shadow: inset 0 0 1px black;
+  transition: background-color .2s, color .2s, transform .1s linear;
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: rgba(black, .25);
+    box-shadow: none;
+    transition: background-color .2s, color .2s, box-shadow .2s, transform .1s linear;
+  }
+  &:active {
+    transform: scale(1.2);
+  }
+  .content & {
+    color: rgba(black, .75);
+    margin-top: 1em;
+  }
+}
+.content {
+  background-color: #C4C4C4;
+  color: peru;
+}
+
