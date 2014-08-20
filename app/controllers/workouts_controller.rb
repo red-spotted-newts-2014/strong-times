@@ -13,9 +13,7 @@ class WorkoutsController < ApplicationController
   def show
     @workouts = Workout.where(params[:user_id])
     @workout = Workout.find(params[:id])
-    respond_to do |format|
-        format.json { render :json => { :workout_specs => @workout.send_specs } }
-      end
+    @exercises = Exercise.where(workout_id: @workout.id)
   end
 
   def create
