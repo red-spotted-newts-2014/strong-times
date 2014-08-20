@@ -3,7 +3,8 @@ class WorkoutsController < ApplicationController
 
 
   def index
-    @workout = Workout.all
+    @workouts = Workout.all
+    @workout = Workout.new
   end
 
   def new

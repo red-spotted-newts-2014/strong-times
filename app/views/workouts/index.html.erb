@@ -1,7 +1,10 @@
 <div class="workoutsIndex">
   <div class="left">
     <h1><u>YOUR WORKOUTS</u></h1>
-    <span class="centerLink"><%= link_to "CREATE NEW WORKOUT", new_user_workout_path, :class => "newWorkout" %></span><br/><br/>
+    <%= form_for @workout, url: {action: "create"} do |f| %>
+      <%= f.text_field :name, :placeholder => "Create New Workout" %>
+      <%= f.submit "Create" %>
+    <% end %>
 
     <% current_user.workouts.each do |workout| %>
       <table class="yourWorkouts">
@@ -22,7 +25,7 @@
           <tr>
           <% workout.exercises.each do |exercise| %>
 
-           <td> <%= link_to "#{exercise.name}", exercise_exercise_histories_path(exercise.id)  %></td>
+           <td> <%= link_to "#{exercise.name}", new_exercise_exercise_history_path(exercise.id)  %></td>
           <% end %>
         </tr>
 
@@ -30,8 +33,6 @@
         <% end %>
   </div>
 
-  <div class="right">
-    <h1 class="rightHeader"><u>WORKOUT RECORDS</u></div>
   </div>
 </div>
 
