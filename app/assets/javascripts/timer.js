@@ -2,10 +2,8 @@ var time
 $(document).ready(function() {
 
   $(".timer_button").on('click', function(event) {
-    event.preventDefault();
 
     time = $(".rest_time").data("rest")
-    $('#toggler').attr('checked', true)
     // console.log(time)
     incrementSums = timerColor(time, 190, 70, 127)
     colorUpDown($(".modal-box"), incrementSums[0], 290, "r")
@@ -27,11 +25,12 @@ $(document).ready(function() {
       // console.log(seconds)
       if (seconds === 0) {
         clearInterval(timer)
-        $('#toggler').attr('checked', false)
       }
       time--
     }
-
+  });
+  $(".workout").on('click', function(event) {
+    setTimeout(changeBack,1200)
   });
 });
 $(".modal")
@@ -69,10 +68,14 @@ function colorUpDown(object, everyMilSecs, totalInc, color) {
 }
 
 
-$(".modal-box").css("background-color","rgb(15,162,219)")
+changeBack = function(){$(".modal-box").css("background-color","rgb(15,162,219)")}
 
 $.fn.getRGBBackgroundColor = function() {
   var rgb = $(this).css('background-color');
   var hex_rgb = rgb.match(/^rgb\((\d+),\s*(\d+),\s*(\d+)\)$/);
   return hex_rgb.slice(1,4).map(function(x){return parseInt(x)})
+}
+
+$.fn.toggleCheckbox = function() {
+    this.attr('checked', !this.attr('checked'));
 }
