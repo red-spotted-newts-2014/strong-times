@@ -1,9 +1,17 @@
-var time
+
+
+var time;
+var currentTime;
+var futureTime;
+var realRestTime = 0;
+var restPhases = 0;
+
 $(document).ready(function() {
 
   $(".timer_button").on('click', function(event) {
 
     time = $(".rest_time").data("rest")
+    currentTime =  new Date().getTime()
     // console.log(time)
     incrementSums = timerColor(time, 190, 70, 127)
     colorUpDown($(".modal-box"), incrementSums[0], 290, "r")
@@ -30,7 +38,11 @@ $(document).ready(function() {
     }
   });
   $(".workout").on('click', function(event) {
-    setTimeout(changeBack,1200)
+    setTimeout(changeBack,1200);
+    futureTime =  new Date().getTime();
+    realRestTime += futureTime - currentTime;
+    restPhases++
+
   });
 });
 $(".modal")
@@ -67,8 +79,11 @@ function colorUpDown(object, everyMilSecs, totalInc, color) {
   setTimeout(function(){colorUpDown(object,everyMilSecs,totalInc, color)}, everyMilSecs)
 }
 
-
-changeBack = function(){$(".modal-box").css("background-color","rgb(15,162,219)")}
+changeBack = function()
+            {
+              $(".modal-box").css("background-color","rgb(15,162,219)");
+              time=0;
+            }
 
 $.fn.getRGBBackgroundColor = function() {
   var rgb = $(this).css('background-color');
@@ -76,6 +91,3 @@ $.fn.getRGBBackgroundColor = function() {
   return hex_rgb.slice(1,4).map(function(x){return parseInt(x)})
 }
 
-$.fn.toggleCheckbox = function() {
-    this.attr('checked', !this.attr('checked'));
-}
