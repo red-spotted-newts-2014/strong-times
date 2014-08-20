@@ -3,7 +3,7 @@ $(document).ready(function() {
 
   $(".timer_button").on('click', function(event) {
     event.preventDefault();
-    time = $(".timer_input").val()
+    time = $(".rest_time").data("rest")
     $('#toggler').attr('checked', true)
     console.log(time)
     var timeFunc = function(){

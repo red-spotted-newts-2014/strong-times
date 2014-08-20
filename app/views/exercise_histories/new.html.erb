@@ -2,8 +2,8 @@ GOALS FOR <%= @exercise.name %> <br/><br/>
 SETS: <%= @exercise.sets %> <br/>
 REPS: <%= @exercise.reps %> <br/>
 WEIGHT: <%= @exercise.weight %> <br/>
-TEMPO: <%= @exercise.tempo %> <br/><br/>
-
+TEMPO: <%= @exercise.tempo %> <br/>
+REST:<span class="rest_time" data-rest=92> 92 </span> <br><br>
 
 
 Achieved
@@ -15,3 +15,20 @@ Achieved
 
   <%= f.submit "Create" %>
 <% end %>
+
+<input type="checkbox" id="toggler" class="modal-toggler">
+
+<section class="exercise-container">
+  <label for="toggler" class="modal  close-modal-area"></label>
+  <div class="modal  modal-box">
+    <h1>  <span class="minutes"></span>0<span class="minute">0</span><span class="colon">:</span><span class="seconds">0</span><span class="second">0</span></h1>
+    <label for="toggler" class="toggle-modal-button">Workout!</label>
+  </div>
+</section>
+<section class="content">
+  <div class="modal">
+
+ <button class="timer_button">Time It!</button><label for="toggler" class="toggle-modal-button">Rest!</label>
+<p>w</p>
+  </div>
+</section>
