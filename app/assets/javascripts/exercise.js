@@ -42,7 +42,7 @@ $(function () {
             type: 'areaspline'
         },
         title: {
-            text: 'Average fruit consumption during one week'
+            text: 'Rest vs Active state'
         },
         legend: {
             layout: 'vertical',
@@ -56,19 +56,19 @@ $(function () {
         },
         xAxis: {
             categories: [
-                'Monday',
-                'Tuesday',
-                'Wednesday',
-                'Thursday',
-                'Friday',
-                'Saturday',
-                'Sunday'
+                '10',
+                '20',
+                '30',
+                '40',
+                '50',
+                '60',
+                '70'
             ],
-            plotBands: [{ // visualize the weekend
-                from: 4.5,
-                to: 6.5,
-                color: 'rgba(68, 170, 213, .2)'
-            }]
+            // plotBands: [{ // visualize the weekend
+            //     from: 4.5,
+            //     to: 6.5,
+            //     color: 'rgba(80.8, 0, 2, .2)'
+            // }]
         },
         yAxis: {
             title: {
@@ -84,14 +84,14 @@ $(function () {
         },
         plotOptions: {
             areaspline: {
-                fillOpacity: 0.5
+                fillOpacity: 0.4
             }
         },
         series: [{
-            name: 'John',
+            name: 'active',
             data: [3, 4, 3, 5, 4, 10, 12]
         }, {
-            name: 'Jane',
+            name: 'rest',
             data: [1, 3, 4, 3, 3, 5, 4]
         }]
     });
