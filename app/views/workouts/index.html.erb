@@ -4,7 +4,7 @@
     <span class="centerLink"><%= link_to "CREATE NEW WORKOUT", new_user_workout_path, :class => "newWorkout" %></span><br/><br/>
 
     <% current_user.workouts.each do |workout| %>
-      <table>
+      <table class="yourWorkouts">
         <th colspan="2"><span class="workoutTitle"><%= workout.name %></span></th>
         <tr>
           <td><%= link_to "WORKOUT NOW", workout_path(workout.id) %></td>
@@ -15,12 +15,23 @@
   </div>
 
   <div class="center">
-    <h1><u>WORKOUT HISTORY</u></h1>
+    <h1 class="centerHeader"><u>VIEW WORKOUT HISTORY</u></h1>
       <% current_user.workouts.each do |workout| %>
-        <% workout.exercises.each do |exercise| %>
-          <%= exercise.name %>
+      <table class="workoutHistoryTable">
+        <th colspan="3"><%= workout.name.upcase %><th/>
+          <tr>
+          <% workout.exercises.each do |exercise| %>
+
+           <td> <%= link_to "#{exercise.name}", exercise_exercise_histories_path(exercise.id)  %></td>
+          <% end %>
+        </tr>
+
+       </table>
         <% end %>
-      <% end %>
+  </div>
+
+  <div class="right">
+    <h1 class="rightHeader"><u>WORKOUT RECORDS</u></div>
   </div>
 </div>
 
