@@ -1,8 +1,6 @@
-body{
 
-}
 .exercise_performance{
-	z-index: 20;
+  z-index: 20;
 }
 
 #abs{
@@ -81,17 +79,17 @@ body{
 }
 
 .svg-container {
-	background: url("human-muscle-anatomy.jpg");
-	background-repeat: no-repeat;
-	background-size: 45%;
-	background-position: center top;
-	height: 900px;
-	overflow: hidden;
+  background: url("human-muscle-anatomy.jpg");
+  background-repeat: no-repeat;
+  background-size: 45%;
+  background-position: center top;
+  height: 900px;
+  overflow: hidden;
 
-	display: inline-block;
-	position: relative;
-	width: 100%;
-	padding-bottom: 100%;
-	vertical-align: middle;
-	overflow: hidden;
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  padding-bottom: 100%;
+  vertical-align: middle;
+  overflow: hidden;
 }
