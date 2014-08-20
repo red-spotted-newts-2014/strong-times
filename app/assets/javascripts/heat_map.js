@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function(){
 	svgBodyElements.abs()
 
 	var numSets = $(".num_sets").data("sets")
-	$( "#abs" ).css("opacity", numSets/(numSets + 0));
+	$( "#abs" ).css("opacity", Math.exp(numSets)p/(Math.exp(numSets) + 1));
 
 	svgBodyElements.chest()
 	svgBodyElements.leftBisep()
