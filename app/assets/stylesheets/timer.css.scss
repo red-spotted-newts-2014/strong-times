@@ -5,6 +5,10 @@ float: right;
 margin: 20px;
 }
 
+.done-ex-input{
+  display: none;
+}
+
 /**, *:before, *:after {
   box-sizing: border-box;
 }*/
@@ -36,7 +40,7 @@ p {
     height: 100%;
   }
   &.modal-box {
-    background: indianred;
+    background: rgb(15,162,219);
     text-align: center;
   }
   .content & {
@@ -90,7 +94,7 @@ p {
   }
 }
 .content {
-  background-color: #C4C4C4;
+  /*background-color: #C4C4C4;*/
   color: peru;
 }
 

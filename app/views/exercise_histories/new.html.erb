@@ -3,9 +3,9 @@ SETS: <%= @exercise.sets %> <br/>
 REPS: <%= @exercise.reps %> <br/>
 WEIGHT: <%= @exercise.weight %> <br/>
 TEMPO: <%= @exercise.tempo %> <br/>
-REST:<span class="rest_time" data-rest=92> 92 </span> <br><br>
+REST:<span class="rest_time" data-rest=65> 65 </span> <br><br>
 
-
+<div class="done-ex-input">
 Achieved
 <%= form_for @exercise_history, url: {action: "create"} do |f| %>
   Sets :<%= f.text_field :sets %> <br/>
@@ -15,6 +15,7 @@ Achieved
 
   <%= f.submit "Create" %>
 <% end %>
+</div>
 
 <input type="checkbox" id="toggler" class="modal-toggler">
 
