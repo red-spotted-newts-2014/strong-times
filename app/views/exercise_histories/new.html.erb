@@ -1,17 +1,17 @@
 GOALS FOR <%= @exercise.name %> <br/><br/>
-SETS: <%= @exercise.sets %> <br/>
+SETS: <span class="set-amount" data-sets=<%=@exercise.sets%>><%= @exercise.sets %> </span><br/>
 REPS: <%= @exercise.reps %> <br/>
 WEIGHT: <%= @exercise.weight %> <br/>
 TEMPO: <%= @exercise.tempo %> <br/>
-REST:<span class="rest_time" data-rest=5> 5 </span> <br><br>
+REST:<span class="rest_time" data-rest=<%= @exercise.rest %>> <%= @exercise.rest %> </span> <br><br>
 
 <div class="done-ex-input">
 Achieved
 <%= form_for @exercise_history, url: {action: "create"} do |f| %>
-  Sets :<%= f.text_field :sets %> <br/>
-  Reps :  <%= f.text_field :reps %> <br/>
-  Weight <%= f.text_field :weight %> <br/>
-  Tempo <%= f.text_field :tempo %> <br/>
+  Sets :<%= f.text_field :sets, :placeholder => @exercise.sets %> <br/>
+  Reps :  <%= f.text_field :reps, :placeholder =>  @exercise.reps %> <br/>
+  Weight <%= f.text_field :weight, :placeholder => @exercise.weight %> <br/>
+  Tempo <%= f.text_field :tempo, :placeholder => @exercise.tempo %> <br/>
 
   <%= f.submit "Create" %>
 <% end %>

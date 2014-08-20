@@ -14,7 +14,7 @@ $(document).ready(function() {
     currentTime =  new Date().getTime()
     // console.log(time)
     incrementSums = timerColor(time, 190, 70, 127)
-    colorUpDown($(".modal-box"), incrementSums[0], 290, "r")
+    colorUpDown($(".modal-box"), incrementSums[0], 190, "r")
     colorUpDown($(".modal-box"), incrementSums[1], 70, "g")
     colorUpDown($(".modal-box"), incrementSums[2], 127, "b")
     var timeFunc = function(){
@@ -37,11 +37,17 @@ $(document).ready(function() {
       time--
     }
   });
+  var sets = $(".set-amount").data("sets")
   $(".workout").on('click', function(event) {
     setTimeout(changeBack,1200);
     futureTime =  new Date().getTime();
     realRestTime += futureTime - currentTime;
     restPhases++
+    console.log(restPhases)
+    console.log(realRestTime)
+    if (restPhases === sets){
+      $(".done-ex-input").show('slow');
+    }
 
   });
 });
@@ -56,10 +62,10 @@ function timerColor(seconds, red, green, blue) {
 }
 
 function colorUpDown(object, everyMilSecs, totalInc, color) {
-  console.log(totalInc)
+  // console.log(totalInc)
   totalInc--
   if (totalInc <= 0) {return}
-  console.log(object.getRGBBackgroundColor())
+  // console.log(object.getRGBBackgroundColor())
   if (color === "r"){
     var red = object.getRGBBackgroundColor()[0]+1
     var green = object.getRGBBackgroundColor()[1]
