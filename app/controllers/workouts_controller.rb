@@ -3,11 +3,7 @@ class WorkoutsController < ApplicationController
 
 
   def index
-    @exercise = Exercise.new
-     @workout = Workout.find(params[:user_id])
-    # @workout = Workout.all
-    @workouts = Workout.where(params[:user_id])
-
+    @workout = Workout.all
   end
 
   def new
