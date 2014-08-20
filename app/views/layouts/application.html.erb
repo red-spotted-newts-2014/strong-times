@@ -4,6 +4,7 @@
   <title>REST-LESS</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
@@ -25,7 +26,10 @@
 
     <%= yield %>
 
-      <footer>Footer is Here</footer>
+    <footer>Footer is Here</footer>
+
   </div>
+  <script src="http://code.highcharts.com/highcharts.js"></script>
+  <script src="http://code.highcharts.com/modules/exporting.js"></script>
 </body>
 </html>

@@ -2,7 +2,6 @@ class ExerciseHistory < ActiveRecord::Base
   belongs_to :workout
   belongs_to :exercise
 
-
   def self.total_sets(user_id, exercise_id)
     total = 0
     user = User.find(user_id)

@@ -4,15 +4,13 @@ document.addEventListener('DOMContentLoaded', function(){
 	svgBodyElements.abs()
 
 	var numSets = $(".num_sets").data("sets")
-	$( "#abs" ).css("opacity", numSets/(numSets + 1));
+	$( "#abs" ).css("opacity", numSets/(numSets + 0));
 
 	svgBodyElements.chest()
 	svgBodyElements.leftBisep()
 	svgBodyElements.rightBisep()
 	svgBodyElements.shoulders()
 	svgBodyElements.thighs()
-
-
 });
 
 
