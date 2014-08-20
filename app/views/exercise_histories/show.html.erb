@@ -4,12 +4,7 @@
 <div class="human">
 </div>
 
-<div class="svg-container">
-</div>
-
-<div id="heatmap" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
 <div class=history>
-  <%= @history%>
   <table style="width:300px" id="muscle_table">
     <th>
       <tr>
@@ -19,15 +14,20 @@
     </th>
     <tbody id="muscle_table_body">
     <% @history.each do |k,v|%>
-      <tr>
-        <td><%= k %></td>
-        <td><%= v %></td>
+      <tr id="mRow">
+        <td id="mName"><%= k %></td>
+        <td id="mvalue"><%= v %></td>
       </tr>
     <%end%>
      </tbody>
    </table>
-   <button id="viewMuscles"></button>
+   <button id="viewMuscles">view workout</button>
 </div>
+
+<div class="svg-container">
+
+</div>
+<div id="heatmap" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
 
 
 <table style="width:900px" id="exercise_table">

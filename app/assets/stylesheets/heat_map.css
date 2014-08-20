@@ -5,91 +5,83 @@
 
 #abs{
   position: absolute;
-  top: 0px;
-  left: 175px;
-  height: 26%;
+  top: 10px;
+  left: 182px;
+  height:77.2%;
   opacity: .3;
 }
 
 #chest{
   position: absolute;
-  top: 0px;
-  left: 175px;
-  height: 26%;
+  top: 10px;
+  left: 182px;
+  height:77.2%;
   opacity: .7;
 }
 #leftBisep{
   position: absolute;
-  top: 0px;
-  left: 175px;
-  height: 26%;
+  top: 10px;
+  left: 177px;
+  height:77.2%;
   opacity: .4;
 }
 #rightBisep{
   position: absolute;
-  top: 0px;
-  left: 175px;
-  height: 26%;
+  top: 10px;
+  left: 184px;
+  height:77.2%;
   opacity: .4;
 }
 #shoulders{
   position: absolute;
-  top: 0px;
-  left: 175px;
-  height: 26%;
+  top: 5px;
+  left: 182px;
+  height:77.2%;
   opacity: .4;
 }
 #thighs{
   position: absolute;
-  top: 0px;
-  left: 175px;
-  height: 26%;
+  top: 10px;
+  left: 179px;
+  height:77.2%;
   opacity: .4;
 }
 
 #back{
   position: absolute;
   top: -2px;
-  left: 175px;
-  height: 26%;
+  left: 195px;
+  height:77.2%;
   opacity: .4;
 }
 #calves{
   position: absolute;
-  top: 0px;
-  left: 175px;
-  height: 26%;
+  top: 10px;
+  left: 195px;
+  height:77.2%;
   opacity: .7;
 }
 
 #glutes{
-  position: absolute;
-  top: 0px;
-  left: 175px;
-  height: 26%;
+  position: relative;
+  top:  10px;
+  left: 195px;
+  height: 77.2%;
   opacity: .5;
 }
 
 #triceps{
   position: absolute;
-  top: 0px;
-  left: 175px;
-  height: 26%;
+  top: 10px;
+  left: 197px;
+  height:77.2%;
   opacity: .5;
 }
-
 .svg-container {
   background: url("human-muscle-anatomy.jpg");
   background-repeat: no-repeat;
   background-size: 45%;
   background-position: center top;
-  height: 900px;
-  overflow: hidden;
-
-  display: inline-block;
-  position: relative;
-  width: 100%;
-  padding-bottom: 100%;
-  vertical-align: middle;
+  height: 700px;
   overflow: hidden;
 }
