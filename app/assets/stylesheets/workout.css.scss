@@ -52,3 +52,27 @@
     height: 40px;
   };
 }
+
+.workoutShow {
+  overflow: scroll;
+
+  h1 {
+    font-size: 50px;
+  }
+
+  table {
+    margin: auto;
+    margin-right: 10px;
+    border: 1px solid black;
+    font-size: 25px;
+    display: inline-table;
+
+    tr {
+      border: 1px solid black;
+    }
+
+    td {
+      border: 1px solid black;
+    }
+  }
+}
