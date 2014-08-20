@@ -3,7 +3,7 @@ class WorkoutsController < ApplicationController
 
 
   def index
-    @workouts = Workout.all
+    @workout = Workout.all
   end
 
   def new
@@ -11,6 +11,7 @@ class WorkoutsController < ApplicationController
   end
 
   def show
+    @workouts = Workout.where(params[:user_id])
     @workout = Workout.find(params[:id])
     respond_to do |format|
         format.json { render :json => { :workout_specs => @workout.send_specs } }
