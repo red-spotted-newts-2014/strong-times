@@ -58,8 +58,10 @@ $(document).ready(function() {
     console.log(restPhases)
     console.log(realRestTime)
     if (restPhases === sets){
+      var finalRest = Math.floor(realRestTime/1000)
       $(".done-ex-input").show('slow');
       $(".content").hide();
+      $("#exercise_history_rest").val(finalRest)
     }
     else {
     $(".set_num").val("").text(restPhases+1)
