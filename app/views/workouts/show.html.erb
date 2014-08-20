@@ -1,0 +1,11 @@
+<%= @workout.name.upcase %><br/>
+<%= link_to "ADD AN EXERCISE", new_workout_exercise_path(@workout.id) %><br/><br/>
+
+EXERCISES<br/>
+<% @exercises.each do |exercise| %>
+  <%= link_to " DO #{exercise.name}", new_exercise_exercise_history_path(exercise.id)%>
+  <%= exercise.sets %>
+  <%= exercise.reps %>
+  <%= exercise.weight %>
+  <%= exercise.tempo %> <br/>
+<% end %>

@@ -15,7 +15,6 @@ class ExercisesController < ApplicationController
   end
 
   def create
-    p "lksjlkjsdkfjsdkfjlsdkjflskdjfksjflksjflksjd"
     workout = Workout.find(params[:workout_id])
     @exercise = workout.exercises.build(exercise_params)
     if @exercise.save
