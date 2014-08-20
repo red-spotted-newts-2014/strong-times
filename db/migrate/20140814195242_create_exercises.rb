@@ -6,6 +6,7 @@ class CreateExercises < ActiveRecord::Migration
       t.string :reps
       t.string :weight
       t.string :tempo
+      t.integer :rest
 
       t.references :workout
 

@@ -12,6 +12,10 @@ class ExerciseHistoriesController < ApplicationController
     @exercise = Exercise.find(params[:exercise_id])
   end
 
+  def show
+    @exercise_history = ExerciseHistory.find(params[:id])
+  end
+
   def create
     exercise = Exercise.find(params[:exercise_id])
     @exercise_history = exercise.exercise_histories.build(exercise_history_params)
@@ -36,7 +40,7 @@ class ExerciseHistoriesController < ApplicationController
   private
 
   def exercise_history_params
-    params.require(:exercise_history).permit(:weight, :sets, :reps, :rest_time, :distance, :running_time)
+    params.require(:exercise_history).permit(:weight, :sets, :reps, :rest, :distance, :running_time)
   end
 
 end
