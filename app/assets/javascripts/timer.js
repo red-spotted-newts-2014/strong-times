@@ -8,8 +8,17 @@ var restPhases = 0;
 
 $(document).ready(function() {
 
-  $(".timer_button").on('click', function(event) {
+  $(".work_holder").on('click', function(event) {
+    $(this).fadeOut('slow');
+    setTimeout(function(){
+      $(".timer_holder").fadeIn('slow')
+      $(".exit_holder").fadeIn('slow')
+      ;}, 500);
+    $(".set_show").show('slow');
+    $(".set_num").text("1");
+  });
 
+  $(".timer_button").on('click', function(event) {
     time = $(".rest_time").data("rest")
     currentTime =  new Date().getTime()
     // console.log(time)
@@ -17,6 +26,7 @@ $(document).ready(function() {
     colorUpDown($(".modal-box"), incrementSums[0], 190, "r")
     colorUpDown($(".modal-box"), incrementSums[1], 70, "g")
     colorUpDown($(".modal-box"), incrementSums[2], 127, "b")
+
     var timeFunc = function(){
     var min = Math.floor(time/60);
     var secs = Math.floor((time-(60*min))/10);
@@ -37,7 +47,9 @@ $(document).ready(function() {
       time--
     }
   });
+
   var sets = $(".set-amount").data("sets")
+
   $(".workout").on('click', function(event) {
     setTimeout(changeBack,1200);
     futureTime =  new Date().getTime();
@@ -47,11 +59,14 @@ $(document).ready(function() {
     console.log(realRestTime)
     if (restPhases === sets){
       $(".done-ex-input").show('slow');
+      $(".content").hide();
     }
-
+    else {
+    $(".set_num").val("").text(restPhases+1)
+    }
   });
 });
-$(".modal")
+
 
 function timerColor(seconds, red, green, blue) {
   var value = seconds*1000
@@ -60,7 +75,7 @@ function timerColor(seconds, red, green, blue) {
   var green_inc = Math.floor(value/green)
   return [red_inc, green_inc, blue_inc]
 }
-
+$("table").find("td")
 function colorUpDown(object, everyMilSecs, totalInc, color) {
   // console.log(totalInc)
   totalInc--
@@ -85,11 +100,11 @@ function colorUpDown(object, everyMilSecs, totalInc, color) {
   setTimeout(function(){colorUpDown(object,everyMilSecs,totalInc, color)}, everyMilSecs)
 }
 
-changeBack = function()
-            {
-              $(".modal-box").css("background-color","rgb(15,162,219)");
-              time=0;
-            }
+function changeBack()
+  {
+    $(".modal-box").css("background-color","rgb(15,162,219)");
+    time=0;
+  }
 
 $.fn.getRGBBackgroundColor = function() {
   var rgb = $(this).css('background-color');
