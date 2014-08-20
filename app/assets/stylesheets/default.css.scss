@@ -18,22 +18,18 @@ $rgba-primary-0: rgba(122,154,170,0.3);
 
 body{
 background-color: $rgba-primary-0;
+background-image: url("background.jpg");
+background-repeat: no-repeat;
+background-size: 100%;
 }
 
 .container{
+
   margin: auto;
   max-width: 90em;
   height: 61.2em;
 }
 
-.optionsBox{
-  padding: 1em;
-  width: 40em;
-  height: 7em;
-  background-color: $rgba-primary-6;
-  margin-left: 10em;
-}
-.optionsBox ul li{
-  list-style-type: none;
-  display: inline-block;
+footer{
+  position: bottom;
 }
