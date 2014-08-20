@@ -20,11 +20,19 @@ body{
 background-position: fixed;
 background-repeat: no-repeat;
 background-size: cover;
+background-image: url('background.jpg')
 }
 
 .container {
   margin: auto;
   max-width: 90em;
-  height: 61.2em;
+  height: 52.2em;
+  border: 1px solid black;
+}
+
+footer {
+  max-width: 90em;
+  height: 75px;
+  margin: auto;
 }
 

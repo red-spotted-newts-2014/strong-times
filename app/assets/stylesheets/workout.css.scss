@@ -4,42 +4,40 @@
 
   .left {
     float: left;
-  }
+    text-align: center;
+  };
 
-  .right {
-    float: right;
-  }
+  .center {
+    float: left;
+    text-align: center;
+  };
+
 
   .newWorkout {
   font-size: 20px;
   text-decoration: none;
-}
+  };
 
   .workoutTitle {
     text-transform: uppercase;
-  }
+  };
 
-  .centerLink {
-    padding-left: 77px;
-  }
 
   table {
     margin-bottom: 20px;
     border: 1px solid black;
-  }
+  };
 
   th {
-    text-align: center;
     width: 275px;
     font-size: 25px;
-  }
+  };
 
   td {
-    text-align: center;
     width: 100px;
     border: 1px solid black;
     height: 40px;
-  }
+  };
 }
 
 
