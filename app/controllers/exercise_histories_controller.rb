@@ -40,7 +40,7 @@ class ExerciseHistoriesController < ApplicationController
   private
 
   def exercise_history_params
-    params.require(:exercise_history).permit(:weight, :reps, :rest_time, :distance, :running_time)
+    params.require(:exercise_history).permit(:weight, :sets, :reps, :rest, :distance, :running_time)
   end
 
 end
