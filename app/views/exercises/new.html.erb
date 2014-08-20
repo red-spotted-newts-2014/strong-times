@@ -1,4 +1,4 @@
-<h1><%= @workout.name %></h1> 
+	<h1><%= @workout.name %></h1>
 
 Create a New Exercise
 
@@ -9,9 +9,9 @@ Create a New Exercise
 		<div class="exercise_form_div">
 
 			<%= form_for @exercise, url: {action: "create"} do |f| %>
-				 Name <%= f.text_field :name, :id => "name", :placeholder => "exercise name", :require => true %> 
+				 Name <%= f.text_field :name, :id => "name", :placeholder => "exercise name", :require => true %>
 				 Sets <%= f.text_field :sets, :id => "sets"%>
-				 Reps <%= f.text_field :reps, :id => "reps" %> 
+				 Reps <%= f.text_field :reps, :id => "reps" %>
 				 Weight <%= f.text_field :weight,:id => "weight" %>
 			   Tempo <%= f.text_field :tempo, :id => "tempo" %>
 				 <%= f.submit "Create" %>
@@ -29,7 +29,7 @@ Create a New Exercise
 		</tr>
 		</th>
 		<tbody id="exercise_table_body">
-			</tbody>	
+			</tbody>
 	</table>
 </div>
 
