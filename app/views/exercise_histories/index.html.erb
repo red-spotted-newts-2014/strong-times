@@ -3,6 +3,9 @@
 
 <div id="num_sets" style="display:none">
 
+  <% if @exercise_history %>
+  <%= @exercise_history.sets %>
+  <% end %>
  </div>
    <!-- <%= image_tag 'abs.svg', :id => "abs"%> -->
 </div>

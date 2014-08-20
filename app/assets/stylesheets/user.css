@@ -1,0 +1,16 @@
+body {
+  text-align: center;
+}
+
+h2 {
+  text-align: center;
+  font-size: 60px;
+  text-transform: uppercase;
+}
+
+form {
+  text-align: center;
+  font-size: 25px;
+  margin-bottom: 10px;
+}
+
