@@ -12,6 +12,10 @@ class ExerciseHistoriesController < ApplicationController
     @exercise = Exercise.find(params[:exercise_id])
   end
 
+  def show
+    @exercise_history = ExerciseHistory.find(params[:id])
+  end
+
   def create
     exercise = Exercise.find(params[:exercise_id])
     @exercise_history = exercise.exercise_histories.build(exercise_history_params)

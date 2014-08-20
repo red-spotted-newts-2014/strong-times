@@ -90,7 +90,8 @@ lunges = Exercise.create(:name => "lunges",
                          :reps =>   ["4", "6", "8", "10", "12"].sample,
                          :weight => ["35", "45", "55"].sample,
                          :tempo =>  ["20", "30", "40"].sample,
-                         :exercise_id => 1)
+                         :exercise_id => 1,
+                         :workout_id => 1)
 end
 
 10.times do
@@ -99,7 +100,8 @@ end
                          :reps =>   ["8", "10", "12"].sample,
                          :weight => ["135", "145", "155"].sample,
                          :tempo =>  ["30", "40", "50"].sample,
-                         :exercise_id => 2)
+                         :exercise_id => 2,
+                         :workout_id => 1)
 end
 
 10.times do
@@ -108,7 +110,8 @@ end
                          :reps =>   ["8", "10", "12"].sample,
                          :weight => ["200", "250", "300"].sample,
                          :tempo =>  ["5", "10", "15"].sample,
-                         :exercise_id => 3)
+                         :exercise_id => 3,
+                         :workout_id => 1)
 end
 
 10.times do
@@ -117,7 +120,8 @@ end
                          :reps =>   ["8", "10", "12"].sample,
                          :weight => "self",
                          :tempo =>  ["5", "10", "15"].sample,
-                         :exercise_id => 4)
+                         :exercise_id => 4,
+                         :workout_id => 1)
 end
 
 10.times do
@@ -126,7 +130,8 @@ end
                          :reps =>   ["8", "10", "12"].sample,
                          :weight => "self",
                          :tempo =>  ["5", "10", "15"].sample,
-                         :exercise_id => 5)
+                         :exercise_id => 5,
+                         :workout_id => 1)
 end
 
 10.times do
@@ -135,7 +140,8 @@ end
                          :reps =>   ["8", "10", "12"].sample,
                          :weight => ["60", "70", "80"].sample,
                          :tempo =>  ["5", "10", "15"].sample,
-                         :exercise_id => 6)
+                         :exercise_id => 6,
+                         :workout_id => 1)
 end
 
 10.times do
@@ -144,7 +150,8 @@ end
                          :reps =>   ["10", "15", "16"].sample,
                          :weight => ["30", "50", "55"].sample,
                          :tempo =>  ["10", "20", "30"].sample,
-                         :exercise_id => 7)
+                         :exercise_id => 7,
+                         :workout_id => 1)
 end
 
 10.times do
@@ -153,7 +160,8 @@ end
                          :reps =>   ["8", "10", "12"].sample,
                          :weight => "self",
                          :tempo =>  ["3", "5", "7"].sample,
-                         :exercise_id => 8)
+                         :exercise_id => 8,
+                         :workout_id => 1)
 end
 
 10.times do
@@ -162,7 +170,8 @@ end
                          :reps =>   ["8", "10", "12"].sample,
                          :weight => ["25", "35", "45"].sample,
                          :tempo =>  ["3", "5", "7"].sample,
-                         :exercise_id => 9)
+                         :exercise_id => 9,
+                         :workout_id => 1)
 end
 
 10.times do
@@ -171,7 +180,8 @@ end
                          :reps =>   ["10", "12", "14"].sample,
                          :weight => "self",
                          :tempo =>  ["10", "15", "20"].sample,
-                         :exercise_id => 10)
+                         :exercise_id => 1,
+                         :workout_id => 10)
 end
 
 
