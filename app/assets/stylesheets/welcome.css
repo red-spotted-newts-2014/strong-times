@@ -1,20 +1,17 @@
 .welcomeIndex {
   text-align: center;
   margin-top: 55px;
-
-  .welcomeLogo {
-    font-size: 75px;
-    /*font-family: -webkit-pictograph;*/
-   };
-
-  .optionsBox {
-    width: 750px;
-    margin: auto;
-
-    .welcomeButtons {
-      display: inline;
-    };
-  }
+}
+.welcomeIndex .welcomeLogo {
+  font-size: 75px;
+  /*font-family: -webkit-pictograph;*/
+}
+.welcomeIndex .optionsBox {
+  width: 750px;
+  margin: auto;
+}
+.welcomeIndex .optionsBox .welcomeButtons {
+  display: inline;
 }
 
 .logInMessage {
@@ -33,11 +30,10 @@ a {
   color: black;
 }
 
- a:hover {
-  color: rgb(179, 175, 175);
+a:hover {
+  color: #b3afaf;
 }
 
 .welcomeIndex {
   margin-top: 10em;
 }
-
