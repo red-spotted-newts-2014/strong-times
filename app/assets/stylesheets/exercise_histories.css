@@ -1,0 +1,15 @@
+.history{
+  width: 300px;
+  height:600px;
+  float: left;
+  overflow: scroll;
+}
+
+#muscle_table{
+  margin-left:10px;
+}
+
+#viewMuscles{
+  margin-top: 10px;
+  margin-right: 100px;
+}
