@@ -2,7 +2,7 @@
   <h1><u><%= @workout.name.upcase %></u></h1>
   <h3><%= link_to "ADD AN EXERCISE", new_workout_exercise_path(@workout.id) %></h3>
   <% @exercises.each do |exercise| %>
-    <table>
+    <table class= "all_exercises">
       <th colspan="2"><%= link_to " DO #{exercise.name.upcase}", new_exercise_exercise_history_path(exercise.id)%></th>
       <tr>
         <td>SETS</td>

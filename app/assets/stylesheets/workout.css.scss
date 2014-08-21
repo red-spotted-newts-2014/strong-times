@@ -29,7 +29,6 @@
     text-transform: uppercase;
   };
 
-
   .yourWorkouts {
     margin-bottom: 20px;
     border: 1px solid black;
@@ -47,7 +46,6 @@
     margin-bottom: 20px;
     background-color: rgba(192,192,192,.1);
     box-shadow: 5px 5px 5px #888888;
-
   }
 
   th {
@@ -68,11 +66,14 @@
   }
 
   table {
-    margin: auto;
-    margin-right: 10px;
+    margin-bottom: 20px;
     border: 1px solid black;
-    font-size: 25px;
+    width: 200px;
+    background-color: rgba(192,192,192,.2);
+    box-shadow: 5px 5px 5px #888888;
+    font-size: 22px;
     display: inline-table;
+    margin-left: 10px;
 
     tr {
       border: 1px solid black;
@@ -80,6 +81,9 @@
 
     td {
       border: 1px solid black;
+    }
+    colspan{
+      font-size: 25;
     }
   }
 }
