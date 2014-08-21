@@ -59,9 +59,11 @@ $(document).ready(function() {
     console.log(realRestTime)
     if (restPhases === sets){
       var finalRest = Math.floor(realRestTime/1000)
+      var average = Math.floor(finalRest/restPhases)
+      $(".final_show").text(average)
       $(".done-ex-input").show('slow');
       $(".content").hide();
-      $("#exercise_history_rest").val(finalRest)
+      $("#exercise_history_rest").val(average)
     }
     else {
     $(".set_num").val("").text(restPhases+1)
