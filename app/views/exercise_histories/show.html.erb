@@ -9,7 +9,7 @@
         </tr>
       </th>
       <tbody id="muscle_table_body">
-      <% @history.each do |k,v|%>
+      <% @history1.each do |k,v|%>
         <tr id="mRow">
           <td id="mName"><%= k %></td>
           <td id="mvalue"><%= v %></td>
@@ -21,12 +21,18 @@
   </div>
 </div>
 
+<div id="body">
+
+</div>
+
 <div class="svg-container">
-<!--   <img src="/assets/images/human-muscle-anatomy.jpg">
- --></div>
 
-<div id="heatmap" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+</div>
 
+<!-- <div id="heatmap" style="min-width: 310px; height: 400px; margin: 0 auto"></div> -->
+
+<div id="line-chart" style="min-width: 400px; max-width: 600px; height: 400px; margin-top: 0px; float: right;"></div>
+<!--
 <table style="width:900px" id="exercise_table">
     <th>
       <tr>
@@ -50,4 +56,4 @@
        </tr>
        <% end%>
       </tbody>
-  </table>
+  </table> -->

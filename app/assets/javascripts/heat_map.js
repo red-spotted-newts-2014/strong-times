@@ -1,19 +1,21 @@
 document.addEventListener('DOMContentLoaded', function(){
 	console.log("loaded")
 
-	// svgBodyElements.abs()
 	var muscle = document.querySelector(".viewMuscles")
 	muscle.addEventListener("click", renderMuscleGroup)
 });
 
 var renderMuscleGroup = function (event) {
 	var muscles = document.querySelector("#muscle_table_body")
-
+	var actual = []
 	for(var x = 0; x < muscles.rows.length; x++){
+			actual.push(parseInt(muscles.rows[x].cells[1].innerHTML))
 		for (var i = 0; i < 2; i++) {
 
 			var numSets = muscles.rows[x].cells[1].innerHTML
-			var expSets = numSets/ (numSets )
+
+			var expSets = Math.exp(numSets/10)/ (Math.exp(numSets/10) + 1)
+			console.log(actual)
 
 			if (muscles.rows[x].cells[i].innerHTML === "chest"){
 				svgBodyElements.chest(expSets)
@@ -31,9 +33,69 @@ var renderMuscleGroup = function (event) {
 				svgBodyElements.back(expSets)
 			}else if (muscles.rows[x].cells[i].innerHTML === "abs"){
 				svgBodyElements.abs(expSets)
+			}else if(muscles.rows[x].cells[i].innerHTML === "biceps"){
+				svgBodyElements.leftBisep(expSets)
+				svgBodyElements.rightBisep(expSets)
 			}
 		}
 	}
+
+console.log(actual)
+$(function () {
+
+    $('#line-chart').highcharts({
+
+        chart: {
+            polar: true,
+            type: 'line'
+        },
+
+        title: {
+            text: 'Workout Trend Report',
+            x: -80
+        },
+
+        pane: {
+            size: '90%'
+        },
+
+        xAxis: {
+            categories: ['Abs', 'Squats', 'Biceps', 'Glutes',
+                    'Calves', 'Chest'],
+            tickmarkPlacement: 'on',
+            lineWidth: 0
+        },
+
+        yAxis: {
+            gridLineInterpolation: 'polygon',
+            lineWidth: 0,
+            min: 0
+        },
+
+        // tooltip: {
+        //     shared: true,
+        //     pointFormat: '<span style="color:{series.color}">{series.name}: <b>${point.y:,.0f}</b><br/>'
+        // },
+
+        legend: {
+            align: 'right',
+            verticalAlign: 'top',
+            y: 70,
+            layout: 'vertical'
+        },
+
+        series: [{
+            name: 'Actual',
+            data: actual,
+            pointPlacement: 'on'
+        }, {
+            name: 'Forcast',
+            data: [6, 4, 2, 10, 20],
+            pointPlacement: 'on'
+        }]
+
+    });
+});
 }
 
 var svgBodyElements = (function (){
