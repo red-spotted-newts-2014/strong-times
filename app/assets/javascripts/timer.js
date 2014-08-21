@@ -102,6 +102,7 @@ function colorUpDown(object, everyMilSecs, totalInc, color) {
   setTimeout(function(){colorUpDown(object,everyMilSecs,totalInc, color)}, everyMilSecs)
 }
 
+
 function changeBack()
   {
     $(".modal-box").css("background-color","rgb(15,162,219)");
