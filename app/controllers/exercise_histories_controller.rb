@@ -13,6 +13,11 @@ class ExerciseHistoriesController < ApplicationController
   end
 
   def show
+
+    Workout
+    @history1 = {thighs: 10, biceps: 10, glutes: 9, abs: 30}
+
+    @history = {thighs: 10, chest: 16, biceps: 9, glutes: 12, abs: 20}
     @exercise_history = ExerciseHistory.find(params[:id])
   end
 
@@ -20,7 +25,7 @@ class ExerciseHistoriesController < ApplicationController
     exercise = Exercise.find(params[:exercise_id])
     @exercise_history = exercise.exercise_histories.build(exercise_history_params)
     if @exercise_history.save
-      redirect_to exercise_exercise_histories_path(params[:exercise_id])
+      redirect_to exercise_history_path(exercise.id)
     else
       redirect_to user_workouts_path(current_user)
     end
