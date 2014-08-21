@@ -1,13 +1,13 @@
-    <nav>
-      <div id="logo">
-        <a href="/">REST-LESS</a>
-      </div>
-      <div id="navBarButtons">
-        <% if user_signed_in? %>
-          <%= button_to('Logout', destroy_user_session_path, :method => :delete, :class=> "navButton") %>
-        <% else %>
-          <%= button_to('LOGIN', new_user_session_path, :method => "get", :class => "navButton")  %>
-          <%= button_to('SIGN UP', new_user_registration_path, :method => "get", :class => "navButton") %>
-        <% end %>
-      </div>
-    </nav>
+<nav>
+  <div id="logo">
+    <a href="/">REST-LESS</a>
+  </div>
+  <div id="navBarButtons">
+    <% if user_signed_in? %>
+      <%= button_to('Logout', destroy_user_session_path, :method => :delete, :class=> "navButton") %>
+    <% else %>
+      <%= button_to('LOGIN', new_user_session_path, :method => "get", :class => "navButton")  %>
+      <%= button_to('SIGN UP', new_user_registration_path, :method => "get", :class => "navButton") %>
+    <% end %>
+  </div>
+</nav>
