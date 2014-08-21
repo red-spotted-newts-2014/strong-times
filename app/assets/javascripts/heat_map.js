@@ -4,6 +4,9 @@ document.addEventListener('DOMContentLoaded', function(){
 	svgBodyElements.abs()
 
 	var numSets = $(".num_sets").data("sets")
+
+	$( "#abs" ).css("opacity", Math.exp(numSets)p/(Math.exp(numSets) + 1));
+
 	console.log(numSets)
 	$( "#abs" ).css("opacity", numSets/(numSets + 1));
 	$( "#chest" ).css("opacity", numSets/(numSets + 70));
@@ -104,5 +107,5 @@ var svgBodyElements = (function (){
 			img.id="triceps";
 			svg.appendChild(img)
 	  }
-	}  
+	}
 })();
