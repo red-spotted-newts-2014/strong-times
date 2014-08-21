@@ -25,6 +25,8 @@ float: right;
 
 .set_show {
   display: none;
+  margin-top: 130px;
+  margin-bottom: 20px;
 }
 
 h1 {
@@ -93,6 +95,7 @@ p {
   display: inline-block;
   padding: 1em;
   cursor: pointer;
+  width: 290px;
   border-radius: .5em;
   box-shadow: inset 0 0 1px black;
   transition: background-color .2s, color .2s, transform .1s linear;
@@ -114,7 +117,14 @@ p {
 }
 
 .content {
+  margin-top: 30px;
   color: peru;
 }
-
+.goals{
+  background-color: rgba(192,192,192,.2);
+    box-shadow: 5px 5px 5px #888888;
+    width: 400px;
+    padding: 10px;
+    margin: 0 auto;
+}
 
