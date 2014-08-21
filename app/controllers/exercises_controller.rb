@@ -18,7 +18,7 @@ class ExercisesController < ApplicationController
     workout = Workout.find(params[:workout_id])
     @exercise = workout.exercises.build(exercise_params)
     if @exercise.save
-      redirect_to user_workouts_path(current_user)
+      redirect_to workout_path(workout.id)
     else
       render json: "failed".to_json
     end

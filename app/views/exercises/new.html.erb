@@ -1,39 +1,17 @@
-	<h1><%= @workout.name %></h1>
+<h1><u><%= @workout.name.upcase %></u></h1>
+<h3><%= link_to "RETURN TO #{@workout.name.upcase} EXERCISES", workout_path(@workout.id) %></h3>
+<h3><%= link_to "RETURN TO ALL WORKOUTS", user_workouts_path(current_user) %><br/><br/>
 
-Create a New Exercise
+<%= form_for @exercise, url: {action: "create"} do |f| %>
+  <%= f.select :name, [ ['SELECT AN EXERCISE'],['SQUATS', 'squats'], ['BENCH PRESS', 'bench press'], ['DEADLIFT', 'deadlift'], ['PULLUPS', 'pullups'], ['PUSHUPS', 'pushups'], ['ROWS', 'rows'], ['CURLS', 'curls'], ['SQUAT THRUSTS', 'squat thrusts'], ['SKULL CRUSHERS', 'skull crushers'], ['LUNGES', 'lunges']], :class => "exerciseFormInput", :require => true %><br/><br/>
+  <%= f.text_field :sets, :class => "exerciseFormInput", :placeholder => "SETS"%><br/><br/>
+	<%= f.text_field :reps, :class => "exerciseFormInput", :placeholder => "REPS" %><br/><br/>
+	<%= f.text_field :weight,:class => "exerciseFormInput", :placeholder => "WEIGHT" %><br/><br/>
+	<%= f.text_field :tempo, :class => "exerciseFormInput", :placeholder => "TEMPO" %><br/><br/>
+	<%= f.text_field :rest, :class => "exerciseFormInput", :placeholder => "REST" %><br/><br/>
+	<%= f.submit "Create" %>
+<% end %>
 
-<!-- NEED AJAX  DO THIS -->
-
-<div class= "exercise_container">
-	<div class="exercise_form_container">
-		<div class="exercise_form_div">
-
-			<%= form_for @exercise, url: {action: "create"} do |f| %>
-				 Name <%= f.text_field :name, :id => "name", :placeholder => "exercise name", :require => true %>
-				 Sets <%= f.text_field :sets, :id => "sets"%>
-				 Reps <%= f.text_field :reps, :id => "reps" %>
-				 Weight <%= f.text_field :weight,:id => "weight" %>
-			   Tempo <%= f.text_field :tempo, :id => "tempo" %>
-			   Rest <%= f.text_field :rest, :id => "rest" %>
-				 <%= f.submit "Create" %>
-			<% end %>
-		</div>
-	</div>
-	<table style="width:900px" id="exercise_table">
-		<th>
-			<tr>
-			<td>Name</td>
-			<td>Sets</td>
-			<td>Reps</td>
-			<td>Weight</td>
-			<td>Tempo</td>
-			<td>Rest</td>
-		</tr>
-		</th>
-		<tbody id="exercise_table_body">
-			</tbody>
-	</table>
-</div>
 
 
 

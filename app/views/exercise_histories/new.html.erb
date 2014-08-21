@@ -1,5 +1,5 @@
 <div class="goals">
-GOALS FOR <%= @exercise.name %> <br/><br/>
+<h1><u>GOALS FOR <%= @exercise.name.upcase %></u></h1> <br/><br/>
 SETS: <span class="set-amount" data-sets=<%=@exercise.sets%>><%= @exercise.sets %> </span><br/><br>
 REPS: <%= @exercise.reps %> <br/><br>
 WEIGHT: <%= @exercise.weight %> <br/><br>
@@ -17,6 +17,7 @@ Achieved
   <%= hidden_field(:exercise_history, :rest) %>
   <%= f.submit "Create" %>
 <% end %>
+<p>Your Actual Rest Time was an average of <span class="final_show"></span> seconds per set.</p>
 </div>
 
 <input type="checkbox" id="toggler" class="modal-toggler">
