@@ -1,21 +1,38 @@
 <div class="workoutsIndex">
   <div class="left">
     <h1><u>YOUR WORKOUTS</u></h1>
-    <span class="centerLink"><%= link_to "CREATE NEW", new_user_workout_path, :class => "newWorkout" %></span><br/><br/>
+    <%= form_for @workout, url: {action: "create"} do |f| %>
+      <%= f.text_field :name, :placeholder => "Create New Workout" %>
+      <%= f.submit "Create" %>
+    <% end %>
 
     <% current_user.workouts.each do |workout| %>
-      <table>
+      <table class="yourWorkouts">
         <th colspan="2"><span class="workoutTitle"><%= workout.name %></span></th>
         <tr>
-          <td><%= link_to "WORKOUT", workout_path(workout.id) %></td>
+          <td><%= link_to "WORKOUT NOW", workout_path(workout.id) %></td>
           <td><%= link_to "ADD EXERCISE", new_workout_exercise_path(workout.id) %></td>
         </tr>
      </table>
     <% end %>
   </div>
 
-  <div class="right">
-    WHAT SHOULD GO HERE
+  <div class="center">
+    <h1 class="centerHeader"><u>VIEW WORKOUT HISTORY</u></h1>
+      <% current_user.workouts.each do |workout| %>
+      <table class="workoutHistoryTable">
+        <th colspan="3"><%= workout.name.upcase %><th/>
+          <tr>
+          <% workout.exercises.each do |exercise| %>
+
+           <td> <%= link_to "#{exercise.name}", new_exercise_exercise_history_path(exercise.id)  %></td>
+          <% end %>
+        </tr>
+
+       </table>
+        <% end %>
+  </div>
+
   </div>
 </div>
 

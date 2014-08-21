@@ -4,42 +4,75 @@
 
   .left {
     float: left;
+    text-align: center;
+    width: 440px;
+  };
+
+  .center {
+    float: right;
+    text-align: center;
+    margin-right: 136px;
+    width: 415px;
+  };
+
+  .centerHeader {
+    margin-bottom: 63px;
   }
 
-  .right {
-    float: right;
-  }
 
   .newWorkout {
   font-size: 20px;
   text-decoration: none;
-}
+  };
 
   .workoutTitle {
     text-transform: uppercase;
-  }
+  };
 
-  .centerLink {
-    padding-left: 77px;
-  }
 
-  table {
+  .yourWorkouts {
     margin-bottom: 20px;
     border: 1px solid black;
+    width: 440px;
+  };
+
+  .workoutHistoryTable {
+    width: 415px;
+    text-align: center;
+    border: 1px solid black;
+    margin-bottom: 20px;
   }
 
   th {
-    text-align: center;
-    width: 275px;
     font-size: 25px;
-  }
+  };
 
   td {
-    text-align: center;
-    width: 100px;
     border: 1px solid black;
     height: 40px;
-  }
+  };
 }
 
+.workoutShow {
+  overflow: scroll;
 
+  h1 {
+    font-size: 50px;
+  }
+
+  table {
+    margin: auto;
+    margin-right: 10px;
+    border: 1px solid black;
+    font-size: 25px;
+    display: inline-table;
+
+    tr {
+      border: 1px solid black;
+    }
+
+    td {
+      border: 1px solid black;
+    }
+  }
+}

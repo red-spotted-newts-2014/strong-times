@@ -1,0 +1,39 @@
+.welcomeIndex {
+  text-align: center;
+  margin-top: 55px;
+}
+.welcomeIndex .welcomeLogo {
+  font-size: 75px;
+  /*font-family: -webkit-pictograph;*/
+}
+.welcomeIndex .optionsBox {
+  width: 750px;
+  margin: auto;
+}
+.welcomeIndex .optionsBox .welcomeButtons {
+  display: inline;
+}
+
+.logInMessage {
+  margin-bottom: 50px;
+  margin-top: 75px;
+}
+
+.authenicate_button {
+  width: 20em;
+  font-size: 4em;
+  margin: auto;
+  text-decoration: none;
+}
+
+a {
+  color: black;
+}
+
+a:hover {
+  color: #b3afaf;
+}
+
+.welcomeIndex {
+  margin-top: 10em;
+}
