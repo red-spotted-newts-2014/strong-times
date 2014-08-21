@@ -13,6 +13,10 @@ class ExerciseHistoriesController < ApplicationController
   end
 
   def show
+
+    Workout
+    @history1 = {thighs: 2, biceps: 6, glutes: 3, abs: 20}
+
     @history = {thighs: 6, chest: 4, biceps: 2, glutes: 10, abs: 20}
     @exercise_history = ExerciseHistory.find(params[:id])
   end

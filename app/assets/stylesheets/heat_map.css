@@ -13,7 +13,7 @@
 
 #chest{
   position: absolute;
-  top: 10px;
+  top: 260px;
   left: 182px;
   height:77.2%;
   opacity: .7;
@@ -78,7 +78,8 @@
   opacity: .5;
 }
 .svg-container {
-  background: url("human-muscle-anatomy.jpg");
+/*   position: absolute;
+*/  background: url("human-muscle-anatomy.jpg");
   background-repeat: no-repeat;
   background-size: 45%;
   background-position: center top;

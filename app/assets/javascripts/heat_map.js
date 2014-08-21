@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', function(){
 	console.log("loaded")
 
 	// svgBodyElements.abs()
-	var muscle = document.querySelector("#viewMuscles")
+	var muscle = document.querySelector(".viewMuscles")
 	muscle.addEventListener("click", renderMuscleGroup)
 });
 

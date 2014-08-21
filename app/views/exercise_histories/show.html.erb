@@ -1,34 +1,31 @@
-<div class="num_sets" data-sets = <%= @exercise_history.sets %> >
-</div>
 
-<div class="human">
-</div>
-
-<div class=history>
-  <table style="width:300px" id="muscle_table">
-    <th>
-      <tr>
-      <td>Name</td>
-      <td>Sets</td>
-      </tr>
-    </th>
-    <tbody id="muscle_table_body">
-    <% @history.each do |k,v|%>
-      <tr id="mRow">
-        <td id="mName"><%= k %></td>
-        <td id="mvalue"><%= v %></td>
-      </tr>
-    <%end%>
-     </tbody>
-   </table>
-   <button id="viewMuscles">view workout</button>
+<div class="history_tables">
+  <div class="history">
+    <table style="width:200px" id="muscle_table">
+      <th>
+        <tr>
+        <td>Name</td>
+        <td>Sets</td>
+        </tr>
+      </th>
+      <tbody id="muscle_table_body">
+      <% @history.each do |k,v|%>
+        <tr id="mRow">
+          <td id="mName"><%= k %></td>
+          <td id="mvalue"><%= v %></td>
+        </tr>
+      <%end%>
+       </tbody>
+     </table>
+     <button class="viewMuscles">chart</button>
+  </div>
 </div>
 
 <div class="svg-container">
+<!--   <img src="/assets/images/human-muscle-anatomy.jpg">
+ --></div>
 
-</div>
 <div id="heatmap" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
-
 
 <table style="width:900px" id="exercise_table">
     <th>
