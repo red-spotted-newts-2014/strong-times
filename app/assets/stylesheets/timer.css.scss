@@ -1,20 +1,21 @@
 .rest_timer {
-font-size: 2.25em;
-position: relative;
-float: right;
-margin: 20px;
+  font-size: 2.25em;
+  position: relative;
+  float: right;
+  margin: 20px;
 }
 
-.done-ex-input{
+.done-ex-input {
   display: none;
 }
+
 .timer_holder {
   display: none;
 }
 
 .work_holder {
   display: inline-block;
- }
+}
 
 .set_show {
   display: none;
@@ -23,13 +24,16 @@ margin: 20px;
 h1 {
   line-height: 1em;
 }
+
 p {
   margin: 0;
   line-height: 2em;
 }
+
 .modal-toggler {
   display: none;
 }
+
 .modal {
   position: absolute;
   top: 50%;
@@ -38,14 +42,17 @@ p {
   border-radius: .5em;
   transform: translate3d(-50%, -50%, 0);
 }
+
 .modal.close-modal-area {
   width: 100%;
   height: 100%;
 }
+
 .modal.modal-box {
   background: #0fa2db;
   text-align: center;
 }
+
 .content .modal {
   width: 100%;
   max-width: 40em;
@@ -59,19 +66,21 @@ p {
   top: 0;
   left: 0;
 }
+
 .exercise-container {
-  background: rgba(black, .75);
+  background: rgba(0, 0, 0, 0.75);
   opacity: 0;
   color: white;
   visibility: hidden;
   transition: opacity 1s, visibility 0s linear 1s;
   z-index: 2;
-  .modal-toggler:checked + & {
-    opacity: 1;
-    visibility: visible;
-    transition: opacity 1s;
-  }
 }
+.modal-toggler:checked + .exercise-container {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 1s;
+}
+
 .toggle-modal-button {
   background-color: transparent;
   color: white;
@@ -82,14 +91,17 @@ p {
   box-shadow: inset 0 0 1px black;
   transition: background-color .2s, color .2s, transform .1s linear;
 }
+
 .toggle-modal-button:hover, .toggle-modal-button:focus, .toggle-modal-button:active {
   background-color: rgba(0, 0, 0, 0.25);
   box-shadow: none;
   transition: background-color .2s, color .2s, box-shadow .2s, transform .1s linear;
 }
+
 .toggle-modal-button:active {
   transform: scale(1.2);
 }
+
 .content .toggle-modal-button {
   color: rgba(0, 0, 0, 0.75);
   margin-top: 1em;
