@@ -1,14 +1,12 @@
 
 <div class="welcomeIndex">
   <span class="welcomeLogo">WELCOME TO REST-LESS</span>
-  <h1>Hold Yourself Accountable For Your Workout Goals</h1>
-
   <div class="optionsBox">
     <% if user_signed_in? %>
       <ul>
-        Do You Want to: <br/>
-       <li><%= link_to "Create A New Workout", new_user_workout_path(current_user) %></li>
-      <li><%= link_to "View All Workouts", user_workouts_path(current_user) %><br/></li></li>
+        <h2>Do You Want to: </h2>
+      <li><%= link_to "Create A New Workout", new_user_workout_path(current_user) %></li>
+     <li><%= link_to "View All Workouts", user_workouts_path(current_user) %><br/></li></li>
      </ul>
     <% else %>
       <h3 class="logInMessage"></h3>
@@ -19,6 +17,30 @@
     <% end %>
   </div>
 </div>
-
+    <section id="bottle">
+        <article>
+        <h1>Hold Yourself Accountable For Your Goals</h1>   
+       <!--  <p><strong>NIKE FREE TR FIT</strong>
+        Each Nike 2010 World Championship Football jersey is made entirely from recycled polyester. That's up to eight recycled plastic bottles per jersey. In total, that diverted nearly 13 million plastic bottles from landfills. Yes, you read right. 13 million. Plastic. Bottles.</p>  -->   
+        </article>
+        <div class="parallax" data-velocity="-.7"></div>
+    </section>
+    <section id="story-freext">
+        <article>
+        <h1>Become aware of your workout trends</h1>   
+      <!--   <p><strong>NIKE FREE TR FIT</strong>
+        The Free TR Fit is designed with a lower environmental impact using
+        environmentally preferred rubber, water-based cementing and recycled polyester.
+        That means every step in the multi-directional flex groove outsole replicates
+        the foot's natural movement and helps women get more out of their workout without
+        leaving a huge environmental footprint. Everyone's a winner.</p>  -->   
+        </article>
+        <div class="parallax" data-velocity="-.2"</div>
+        <div class="parallax" data-velocity="-.7" data-fit="525"></div>
+    </section>
+    <section>
+      <article>
+      </article>
+    </section>
 
 
