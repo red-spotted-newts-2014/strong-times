@@ -2,10 +2,10 @@
 
 <%= form_for @exercise, url: {action: "create"} do |f| %>
   <%= f.select :name, [ ['SELECT AN EXERCISE'],['SQUATS', 'squats'], ['BENCH PRESS', 'bench press'], ['DEADLIFT', 'deadlift'], ['PULLUPS', 'pullups'], ['PUSHUPS', 'pushups'], ['ROWS', 'rows'], ['CURLS', 'curls'], ['SQUAT THRUSTS', 'squat thrusts'], ['SKULL CRUSHERS', 'skull crushers'], ['LUNGES', 'lunges']], :class => "exerciseFormInput", :require => true %><br/><br/>
-  <%= f.text_field :sets, :class => "exerciseFormInput", :placeholder => "SETS"%><br/>
-	<%= f.text_field :reps, :class => "exerciseFormInput", :placeholder => "REPS" %><br/>
-	<%= f.text_field :weight,:class => "exerciseFormInput", :placeholder => "WEIGHT" %><br/>
-	<%= f.text_field :tempo, :class => "exerciseFormInput", :placeholder => "TEMPO" %><br/>
+  <%= f.text_field :sets, :class => "exerciseFormInput", :placeholder => "SETS"%><br/><br/>
+	<%= f.text_field :reps, :class => "exerciseFormInput", :placeholder => "REPS" %><br/><br/>
+	<%= f.text_field :weight,:class => "exerciseFormInput", :placeholder => "WEIGHT" %><br/><br/>
+	<%= f.text_field :tempo, :class => "exerciseFormInput", :placeholder => "TEMPO" %><br/><br/>
 	<%= f.text_field :rest, :class => "exerciseFormInput", :placeholder => "REST" %><br/><br/>
 	<%= f.submit "Create" %>
 <% end %>
