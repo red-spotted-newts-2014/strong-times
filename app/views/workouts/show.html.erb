@@ -1,5 +1,6 @@
 <div class="workoutShow">
   <h1><u><%= @workout.name.upcase %></u></h1>
+  <h3><%= link_to "RETURN TO YOUR WORKOUTS", user_workouts_path(current_user) %></h3>
   <h3><%= link_to "ADD AN EXERCISE", new_workout_exercise_path(@workout.id) %></h3>
   <% @exercises.each do |exercise| %>
     <table class= "all_exercises">
@@ -11,7 +12,8 @@
        <tr>
          <td>REPS</td>
          <td><%= exercise.reps %></td>
-      <tr>
+       </tr>
+       <tr>
         <td>WEIGHT</td>
         <td><%= exercise.weight %></td>
       </tr>
