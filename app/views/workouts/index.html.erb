@@ -1,14 +1,28 @@
-<%= link_to "create new workout", new_user_workout_path  %><br/><br/>
+<div class="workoutsIndex">
+  <div class="left">
+    <h1><u>YOUR WORKOUTS</u></h1>
+    <span class="centerLink"><%= link_to "CREATE NEW WORKOUT", new_user_workout_path, :class => "newWorkout" %></span><br/><br/>
 
-Your Workouts <br/><br/>
-<% current_user.workouts.each do |workout| %>
-  <%= link_to "#{workout.name}", edit_workout_path(current_user.id) %><br/>
-  <%= link_to "Add A New Exercise(create ajax form here)",  new_workout_exercise_path(workout.id) %><br/>
-  EXERCISES (Make div that expands with exercises on click)<br/>
-  <% workout.exercises.each do |exercise| %>
-    <%= link_to "Do #{exercise.name}", new_exercise_exercise_history_path(exercise.id) %>
-  <% end %><br/><br/>
-<% end %>
+    <% current_user.workouts.each do |workout| %>
+      <table>
+        <th colspan="2"><span class="workoutTitle"><%= workout.name %></span></th>
+        <tr>
+          <td><%= link_to "WORKOUT NOW", workout_path(workout.id) %></td>
+          <td><%= link_to "ADD EXERCISE", new_workout_exercise_path(workout.id) %></td>
+        </tr>
+     </table>
+    <% end %>
+  </div>
+
+  <div class="center">
+    <h1><u>WORKOUT HISTORY</u></h1>
+      <% current_user.workouts.each do |workout| %>
+        <% workout.exercises.each do |exercise| %>
+          <%= exercise.name %>
+        <% end %>
+      <% end %>
+  </div>
+</div>
 
 
 

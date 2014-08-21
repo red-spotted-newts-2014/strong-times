@@ -1,0 +1,43 @@
+.workoutsIndex {
+  text-align: left;
+  padding-left: 35px;
+
+  .left {
+    float: left;
+    text-align: center;
+  };
+
+  .center {
+    float: left;
+    text-align: center;
+  };
+
+
+  .newWorkout {
+  font-size: 20px;
+  text-decoration: none;
+  };
+
+  .workoutTitle {
+    text-transform: uppercase;
+  };
+
+
+  table {
+    margin-bottom: 20px;
+    border: 1px solid black;
+  };
+
+  th {
+    width: 275px;
+    font-size: 25px;
+  };
+
+  td {
+    width: 100px;
+    border: 1px solid black;
+    height: 40px;
+  };
+}
+
+

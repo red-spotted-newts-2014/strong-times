@@ -1,15 +1,10 @@
-body{
 
-	
-	
-}
 .exercise_performance{
-	z-index: 20;
+  z-index: 20;
 }
 
 #abs{
   position: absolute;
-  /*background-image: url('abs.svg');*/
   top: 0px;
   left: 175px;
   height: 26%;
@@ -18,7 +13,6 @@ body{
 
 #chest{
   position: absolute;
-  /*background-image: url('abs.svg');*/
   top: 0px;
   left: 175px;
   height: 26%;
@@ -26,7 +20,6 @@ body{
 }
 #leftBisep{
   position: absolute;
-  /*background-image: url('abs.svg');*/
   top: 0px;
   left: 175px;
   height: 26%;
@@ -34,7 +27,6 @@ body{
 }
 #rightBisep{
   position: absolute;
-  /*background-image: url('abs.svg');*/
   top: 0px;
   left: 175px;
   height: 26%;
@@ -42,7 +34,6 @@ body{
 }
 #shoulders{
   position: absolute;
-  /*background-image: url('abs.svg');*/
   top: 0px;
   left: 175px;
   height: 26%;
@@ -50,35 +41,64 @@ body{
 }
 #thighs{
   position: absolute;
-  /*background-image: url('abs.svg');*/
   top: 0px;
   left: 175px;
   height: 26%;
   opacity: .4;
 }
 
+#back{
+  position: absolute;
+  top: -2px;
+  left: 175px;
+  height: 26%;
+  opacity: .4;
+}
+#calves{
+  position: absolute;
+  top: 0px;
+  left: 175px;
+  height: 26%;
+  opacity: .7;
+}
 
-.svg-container {
-	background: url("human-muscle-anatomy.jpg");
-	background-repeat: no-repeat;
-	background-size: 45%;
-	background-position: center top;
-	height: 900px;
-	overflow: hidden;
+#glutes{
+  position: absolute;
+  top: 0px;
+  left: 175px;
+  height: 26%;
+  opacity: .5;
+}
 
-	display: inline-block;
-	position: relative;
-	width: 100%;
-	padding-bottom: 100%;
-	vertical-align: middle;
-	overflow: hidden;
+#triceps{
+  position: absolute;
+  top: 0px;
+  left: 175px;
+  height: 26%;
+  opacity: .5;
 }
 
 .svg-container {
-	display: inline-block;
-	position: relative;
-	width: 100%;
-	padding-bottom: 100%;
-	vertical-align: middle;
-	overflow: hidden;
+  background: url("human-muscle-anatomy.jpg");
+  background-repeat: no-repeat;
+  background-size: 45%;
+  background-position: center top;
+  height: 900px;
+  overflow: hidden;
+
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  padding-bottom: 100%;
+  vertical-align: middle;
+  overflow: hidden;
+}
+
+.svg-container {
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  padding-bottom: 100%;
+  vertical-align: middle;
+  overflow: hidden;
 }

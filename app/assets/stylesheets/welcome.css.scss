@@ -1,14 +1,10 @@
-// Place all the styles related to the welcome controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
-
 .welcomeIndex {
   text-align: center;
   margin-top: 55px;
 
   .welcomeLogo {
-   font-size: 75px;
-   font-family: -webkit-pictograph;
+    font-size: 75px;
+    /*font-family: -webkit-pictograph;*/
    };
 
   .optionsBox {
@@ -16,8 +12,8 @@
     margin: auto;
 
     .welcomeButtons {
-     display: inline;
-    }
+      display: inline;
+    };
   }
 }
 
@@ -31,7 +27,6 @@
   font-size: 4em;
   margin: auto;
   text-decoration: none;
-
 }
 
 a {
@@ -39,10 +34,10 @@ a {
 }
 
  a:hover {
-   color: rgb(179, 175, 175)
+  color: rgb(179, 175, 175);
 }
 
-.welcomeIndex{
+.welcomeIndex {
   margin-top: 10em;
 }
 

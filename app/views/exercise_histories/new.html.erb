@@ -1,18 +1,20 @@
+<div class="goals">
 GOALS FOR <%= @exercise.name %> <br/><br/>
-SETS: <%= @exercise.sets %> <br/>
-REPS: <%= @exercise.reps %> <br/>
-WEIGHT: <%= @exercise.weight %> <br/>
-TEMPO: <%= @exercise.tempo %> <br/>
-REST:<span class="rest_time" data-rest=5> 5 </span> <br><br>
-
+SETS: <span class="set-amount" data-sets=<%=@exercise.sets%>><%= @exercise.sets %> </span><br/><br>
+REPS: <%= @exercise.reps %> <br/><br>
+WEIGHT: <%= @exercise.weight %> <br/><br>
+TEMPO: <%= @exercise.tempo %> <br/><br>
+REST:<span class="rest_time" data-rest=<%= @exercise.rest %>> <%= @exercise.rest %> </span> <br><br>
+</div>
+<div class="set_show">Set: <span class="set_num"></span></div>
 <div class="done-ex-input">
 Achieved
 <%= form_for @exercise_history, url: {action: "create"} do |f| %>
-  Sets :<%= f.text_field :sets %> <br/>
-  Reps :  <%= f.text_field :reps %> <br/>
-  Weight <%= f.text_field :weight %> <br/>
-  Tempo <%= f.text_field :tempo %> <br/>
-
+  Sets :<%= f.text_field :sets, :placeholder => @exercise.sets %> <br/>
+  Reps :  <%= f.text_field :reps, :placeholder =>  @exercise.reps %> <br/>
+  Weight <%= f.text_field :weight, :placeholder => @exercise.weight %> <br/>
+  Tempo <%= f.text_field :tempo, :placeholder => @exercise.tempo %> <br/>
+  <%= hidden_field(:exercise_history, :rest) %>
   <%= f.submit "Create" %>
 <% end %>
 </div>
@@ -28,8 +30,9 @@ Achieved
 </section>
 <section class="content">
   <div class="modal">
-
-<label for="toggler" class="toggle-modal-button timer_button">Rest!</span></label>
-<p>w</p>
+<div class="work_holder"><div class="toggle-modal-button">Begin Workout!</div></div>
+<div class="timer_holder"><label for="toggler" class="toggle-modal-button timer_button">Rest!</span></label></div>
+<!-- <div class="exit_holder"><div class="toggle-modal-button">Quit!</div></div> -->
+<p></p>
   </div>
 </section>
