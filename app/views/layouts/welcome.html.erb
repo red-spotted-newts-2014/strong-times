@@ -2,15 +2,25 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <title>REST-LESS</title>
-  <%= stylesheet_link_tag 'application' %>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <link href="parralax.css" rel="stylesheet">
 </head>
 <body>
-  <div class="container">
     <%= yield %>
   </div>
-  <footer>Text goes here</footer>
 </body>
+	<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+	<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+	<script src="parralax.js"></script>
+	<script>
+	    $(document).ready(function(){
+	       $('.parallax').scrolly({bgParallax: true});
+	    });
+	</script>
 </html>

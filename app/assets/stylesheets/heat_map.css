@@ -104,7 +104,6 @@
   position: absolute;
   left: 400px;
   top: 100px;
-
   background-repeat: no-repeat;
   background-size: 45%;
   background-position: center top;
@@ -112,3 +111,4 @@
   width: 1500px;
   overflow: hidden;
 }
+

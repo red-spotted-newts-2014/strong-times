@@ -1,14 +1,12 @@
 
 <div class="welcomeIndex">
   <span class="welcomeLogo">WELCOME TO REST-LESS</span>
-  <h1>Hold Yourself Accountable For Your Workout Goals</h1>
-
   <div class="optionsBox">
     <% if user_signed_in? %>
       <ul>
-        Do You Want to: <br/>
-       <li><%= link_to "Create A New Workout", new_user_workout_path(current_user) %></li>
-      <li><%= link_to "View All Workouts", user_workouts_path(current_user) %><br/></li></li>
+        <h2>Do You Want to: </h2>
+      <li><%= link_to "Create A New Workout", new_user_workout_path(current_user) %></li>
+     <li><%= link_to "View All Workouts", user_workouts_path(current_user) %><br/></li></li>
      </ul>
     <% else %>
       <h3 class="logInMessage"></h3>
@@ -19,6 +17,4 @@
     <% end %>
   </div>
 </div>
-
-
 

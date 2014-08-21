@@ -11,7 +11,6 @@ var renderMuscleGroup = function (event) {
 	for(var x = 0; x < muscles.rows.length; x++){
 			actual.push(parseInt(muscles.rows[x].cells[1].innerHTML))
 		for (var i = 0; i < 2; i++) {
-
 			var numSets = muscles.rows[x].cells[1].innerHTML
 
 			var expSets = Math.exp(numSets/10)/ (Math.exp(numSets/10) + 1)

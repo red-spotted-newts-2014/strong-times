@@ -1,0 +1,19 @@
+.newExerciseFormPage {
+  .workoutNameHeader {
+  font-size: 70px;
+  }
+
+  .newExerciseForm {
+    width: 400px;
+    margin: auto;
+
+    form {
+      text-align: center;
+    }
+
+    .formInput {
+      width: 345px;
+      text-align: center;
+    }
+  }
+}

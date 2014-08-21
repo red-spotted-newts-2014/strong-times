@@ -1,6 +1,15 @@
+#new_user{
+  width:300px;
+  margin: 0 auto;
+  background-color: rgba(192,192,192,.4);
+  padding: 10px;
+}
+
 .welcomeIndex {
   text-align: center;
   margin-top: 55px;
+  background-color: rgba(192,192,192,.4);
+  padding: 20px;
 }
 .welcomeIndex .welcomeLogo {
   font-size: 75px;
@@ -30,6 +39,11 @@ a {
   color: black;
 }
 
+ul li{
+  text-decoration: none;
+  list-style-type: none;
+  font-size: 30px;
+}
 a:hover {
   color: #b3afaf;
 }
