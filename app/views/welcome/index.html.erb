@@ -1,10 +1,11 @@
+  <span >welcome</span>
 
 <div class="welcomeIndex">
-  <span class="welcomeLogo">WELCOME TO REST-LESS</span>
+ <h2>WELCOME TO REST-LESS</h2>
   <div class="optionsBox">
     <% if user_signed_in? %>
       <ul>
-        <h2>Do You Want to: </h2>
+        <h3>Do You Want to: </h3>
       <li><%= link_to "Create A New Workout", new_user_workout_path(current_user) %></li>
      <li><%= link_to "View All Workouts", user_workouts_path(current_user) %><br/></li></li>
      </ul>
@@ -17,4 +18,7 @@
     <% end %>
   </div>
 </div>
+
+
+
 
