@@ -128,4 +128,15 @@ p {
     margin: 0 auto;
     color: black;
 }
+.average{
+  font-size: 20px;
+  margin-bottom: 4em;
+}
+.new_exercise_history{
+    background-color: rgba(192,192,192,.2);
+    box-shadow: 5px 5px 5px #888888;
+    width: 400px;
+    padding: 10px;
+    margin: 0 auto;
+}
 

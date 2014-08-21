@@ -8,16 +8,16 @@
 </div>
 <div class="set_show"><h1>Set: <span class="set_num"></span></h1></div>
 <div class="done-ex-input">
-Achieved
+<h3>Achieved</h3>
 <%= form_for @exercise_history, url: {action: "create"} do |f| %>
   Sets :<%= f.text_field :sets, :placeholder => @exercise.sets %> <br/>
   Reps :  <%= f.text_field :reps, :placeholder =>  @exercise.reps %> <br/>
-  Weight <%= f.text_field :weight, :placeholder => @exercise.weight %> <br/>
-  Tempo <%= f.text_field :tempo, :placeholder => @exercise.tempo %> <br/>
+  Weight: <%= f.text_field :weight, :placeholder => @exercise.weight %> <br/>
+  Tempo: <%= f.text_field :tempo, :placeholder => @exercise.tempo %> <br/>
   <%= hidden_field(:exercise_history, :rest) %>
   <%= f.submit "Create" %>
 <% end %>
-<p>Your Actual Rest Time was an average of <span class="final_show"></span> seconds per set.</p>
+<h4 class="average">Your Actual Rest Time was an average of <span class="final_show"></span> seconds per set.</h4>
 </div>
 
 <input type="checkbox" id="toggler" class="modal-toggler">
