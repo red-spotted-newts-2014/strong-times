@@ -1,4 +1,6 @@
 <h1><u><%= @workout.name.upcase %></u></h1>
+<h3><%= link_to "RETURN TO #{@workout.name.upcase} EXERCISES", workout_path(@workout.id) %></h3>
+<h3><%= link_to "RETURN TO ALL WORKOUTS", user_workouts_path(current_user) %><br/><br/>
 
 <%= form_for @exercise, url: {action: "create"} do |f| %>
   <%= f.select :name, [ ['SELECT AN EXERCISE'],['SQUATS', 'squats'], ['BENCH PRESS', 'bench press'], ['DEADLIFT', 'deadlift'], ['PULLUPS', 'pullups'], ['PUSHUPS', 'pushups'], ['ROWS', 'rows'], ['CURLS', 'curls'], ['SQUAT THRUSTS', 'squat thrusts'], ['SKULL CRUSHERS', 'skull crushers'], ['LUNGES', 'lunges']], :class => "exerciseFormInput", :require => true %><br/><br/>
