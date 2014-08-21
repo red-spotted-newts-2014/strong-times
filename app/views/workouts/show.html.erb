@@ -1,29 +1,11 @@
-<div class="workoutShow">
-  <h1><u><%= @workout.name.upcase %></u></h1>
-  <h3><%= link_to "ADD AN EXERCISE", new_workout_exercise_path(@workout.id) %></h3>
-  <% @exercises.each do |exercise| %>
-    <table>
-      <th colspan="2"><%= link_to " DO #{exercise.name.upcase}", new_exercise_exercise_history_path(exercise.id)%></th>
-      <tr>
-        <td>SETS</td>
-        <td><%= exercise.sets %></td>
-      </tr>
-       <tr>
-         <td>REPS</td>
-         <td><%= exercise.reps %></td>
-      <tr>
-        <td>WEIGHT</td>
-        <td><%= exercise.weight %></td>
-      </tr>
-      <tr>
-        <td>TEMPO</td>
-        <td><%= exercise.tempo %></td>
-      </tr>
-      <tr>
-        <td>REST</td>
-        <td><%= exercise.rest %></td>
-      </tr>
-    <table>
-  <% end %>
-</div>
+<%= @workout.name.upcase %><br/>
+<%= link_to "ADD AN EXERCISE", new_workout_exercise_path(@workout.id) %><br/><br/>
 
+EXERCISES<br/>
+<% @exercises.each do |exercise| %>
+  <%= link_to " DO #{exercise.name}", new_exercise_exercise_history_path(exercise.id)%>
+  <%= exercise.sets %>
+  <%= exercise.reps %>
+  <%= exercise.weight %>
+  <%= exercise.tempo %> <br/>
+<% end %>
