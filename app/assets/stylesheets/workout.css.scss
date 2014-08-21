@@ -47,7 +47,13 @@
     background-color: rgba(192,192,192,.1);
     box-shadow: 5px 5px 5px #888888;
   }
+.yourWorkouts a, .workoutHistoryTable a{
+  color: black;
+}
 
+.yourWorkouts a:hover, .workoutHistoryTable a:hover{
+  color:#b3afaf;
+}
   th {
     font-size: 25px;
   };
@@ -55,11 +61,13 @@
   td {
     border: 1px solid black;
     height: 40px;
+    color: black;
   };
 }
 
 .workoutShow {
   overflow: scroll;
+  color: black;
 
   h1 {
     font-size: 50px;
@@ -81,6 +89,7 @@
 
     td {
       border: 1px solid black;
+      color: black;
     }
     colspan{
       font-size: 25;
@@ -88,6 +97,7 @@
     }
     a {
       text-decoration: none;
+      color:black;
     }
   }
 }

@@ -38,9 +38,8 @@
 }
 
 a {
-  color: white;
-    text-decoration: none;
-
+  color: black;
+  text-decoration: none;
 }
 
 h3{
@@ -59,11 +58,19 @@ ul li{
 
 a:hover {
   color: #b3afaf;
-    text-decoration: none;
-
+  text-decoration: none;
 }
 
 .welcomeIndex {
   margin-top: 10em;
 }
+
+#links a, #links h3{
+  color: white;
+}
+
+#links a:hover{
+  color: #b3afaf;
+}
+
 

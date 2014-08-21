@@ -5,9 +5,9 @@
   <div class="optionsBox">
     <% if user_signed_in? %>
       <ul>
-        <h3>Do You Want to: </h3>
-      <li><%= link_to "Create A New Workout", new_user_workout_path(current_user) %></li>
-     <li><%= link_to "View All Workouts", user_workouts_path(current_user) %><br/></li></li>
+        <h3 style="color: white">Do You Want to: </h3>
+      <li id="links"><%= link_to "Create A New Workout", new_user_workout_path(current_user) %></li>
+     <li id="links", ><%= link_to "View All Workouts", user_workouts_path(current_user) %><br/></li></li>
      </ul>
     <% else %>
       <h3 class="logInMessage"></h3>
