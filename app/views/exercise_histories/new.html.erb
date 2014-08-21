@@ -1,12 +1,12 @@
 <div class="goals">
-<h1><u>GOALS FOR <%= @exercise.name.upcase %></u></h1> <br/><br/>
-SETS: <span class="set-amount" data-sets=<%=@exercise.sets%>><%= @exercise.sets %> </span><br/><br>
-REPS: <%= @exercise.reps %> <br/><br>
-WEIGHT: <%= @exercise.weight %> <br/><br>
-TEMPO: <%= @exercise.tempo %> <br/><br>
-REST:<span class="rest_time" data-rest=<%= @exercise.rest %>> <%= @exercise.rest %> </span> <br><br>
+  <h3><strong>GOALS FOR <%= @exercise.name.upcase %></strong></h3> <br/>
+  <h3>SETS: <span class="set-amount" data-sets=<%=@exercise.sets%>><%= @exercise.sets %> </span></h3>
+  <h3>REPS: <%= @exercise.reps %></h3>
+  <h3>WEIGHT: <%= @exercise.weight %></h3>
+  <h3>TEMPO: <%= @exercise.tempo %></h3>
+  <h3>REST:<span class="rest_time" data-rest=<%= @exercise.rest %>> <%= @exercise.rest %> </span></h3>
 </div>
-<div class="set_show">Set: <span class="set_num"></span></div>
+<div class="set_show"><h1>Set: <span class="set_num"></span></h1></div>
 <div class="done-ex-input">
 Achieved
 <%= form_for @exercise_history, url: {action: "create"} do |f| %>
@@ -25,15 +25,19 @@ Achieved
 <section class="exercise-container">
   <label for="toggler" class="modal  close-modal-area"></label>
   <div class="modal  modal-box">
-    <h1>  <span class="minutes"></span>0<span class="minute">0</span><span class="colon">:</span><span class="seconds">0</span><span class="second">0</span></h1>
-    <label for="toggler" class="workout toggle-modal-button">Workout!</label>
+    <h2> <span class="minutes"></span>0<span class="minute">0</span><span class="colon">:</span><span class="seconds">0</span><span class="second">0</span></h2>
+    <label for="toggler" class="workout toggle-modal-button"><h1>Workout!</h1></label>
   </div>
 </section>
 <section class="content">
   <div class="modal">
-<div class="work_holder"><div class="toggle-modal-button">Begin Workout!</div></div>
-<div class="timer_holder"><label for="toggler" class="toggle-modal-button timer_button">Rest!</span></label></div>
+    <div class="work_holder">
+      <div class="toggle-modal-button"><h1>Begin Workout!</h1>
+      </div>
+    </div>
+    <div class="timer_holder"><label for="toggler" class="toggle-modal-button timer_button"><span><h1>Rest!</h1></span></label>
+    </div>
 <!-- <div class="exit_holder"><div class="toggle-modal-button">Quit!</div></div> -->
-<p></p>
+    <p></p>
   </div>
 </section>
