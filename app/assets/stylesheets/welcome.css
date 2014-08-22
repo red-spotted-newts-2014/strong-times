@@ -8,19 +8,19 @@
 .welcomeIndex {
   color: white;
   text-align: center;
-  /*margin-top: 55px;*/
   background-color: rgba(0,0,0,0.6);
   padding: 20px;
 }
 .welcomeIndex .welcomeLogo {
   color: white;
   font-size: 75px;
-  /*font-family: -webkit-pictograph;*/
 }
+
 .welcomeIndex .optionsBox {
   width: 750px;
   margin: auto;
 }
+
 .welcomeIndex .optionsBox .welcomeButtons {
   display: inline;
 }
@@ -43,7 +43,7 @@ a {
 }
 
 h3{
-  font-size: 40px;
+  font-size: 25px;
 }
 
 h2{

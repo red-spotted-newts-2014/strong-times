@@ -1,3 +1,6 @@
+<div class="background5">
+</div>
+
 <div class="goals">
   <h3><strong>GOALS FOR <%= @exercise.name.upcase %></strong></h3> <br/>
   <h3>SETS: <span class="set-amount" data-sets=<%=@exercise.sets%>><%= @exercise.sets %> </span></h3>
@@ -6,7 +9,7 @@
   <h3>TEMPO: <%= @exercise.tempo %></h3>
   <h3>REST:<span class="rest_time" data-rest=<%= @exercise.rest %>> <%= @exercise.rest %> </span></h3>
 </div>
-<div class="set_show"><h1>Set: <span class="set_num"></span></h1></div>
+<div class="set_show"><h1 >Set: <span class="set_num"></span></h1></div>
 <div class="done-ex-input">
 <h3>Achieved</h3>
 <%= form_for @exercise_history, url: {action: "create"} do |f| %>
@@ -17,7 +20,9 @@
   <%= hidden_field(:exercise_history, :rest) %>
   <%= f.submit "Create" %>
 <% end %>
-<h4 class="average">Your Actual Rest Time was an average of <span class="final_show"></span> seconds per set.</h4>
+
+<h4 class="average"><strong>Your Actual Rest Time was an average of <span class="final_show"></span> seconds per set.</strong></h4>
+
 </div>
 
 <input type="checkbox" id="toggler" class="modal-toggler">
@@ -25,17 +30,17 @@
 <section class="exercise-container">
   <label for="toggler" class="modal  close-modal-area"></label>
   <div class="modal  modal-box">
-    <h2> <span class="minutes"></span>0<span class="minute">0</span><span class="colon">:</span><span class="seconds">0</span><span class="second">0</span></h2>
-    <label for="toggler" class="workout toggle-modal-button"><h1>Workout!</h1></label>
+    <h2> <span class="minutes" style="color:white" ></span>0<span class="minute" style="color:white">0</span><span class="colon" style="color:white">:</span><span class="seconds" style="color:white">0</span><span class="second" style="color:white">0</span></h2>
+    <label for="toggler" class="workout toggle-modal-button"><h1 style="color:white">Workout!</h1></label>
   </div>
 </section>
 <section class="content">
   <div class="modal">
     <div class="work_holder">
-      <div class="toggle-modal-button"><h1>Begin Workout!</h1>
+      <div class="toggle-modal-button"><h1 style="color:white">Begin Workout!</h1>
       </div>
     </div>
-    <div class="timer_holder"><label for="toggler" class="toggle-modal-button timer_button"><span><h1>Rest!</h1></span></label>
+    <div class="timer_holder"><label for="toggler" class="toggle-modal-button timer_button"><span><h1 style="color:white">Rest!</h1></span></label>
     </div>
 <!-- <div class="exit_holder"><div class="toggle-modal-button">Quit!</div></div> -->
     <p></p>

@@ -3,17 +3,17 @@
   <div class="history">
     <table style="width:200px" id="muscle_table">
       <th>
+        <caption class="values"><%= @exercise_name.upcase %></caption>
         <tr>
-        <td><%= @exercise_name %></td>
-        <td>Name</td>
-        <td>Sets</td>
+        <td class="values">Name</td>
+        <td class="values">Sets</td>
         </tr>
       </th>
       <tbody id="muscle_table_body">
       <% @history1.each do |k,v|%>
         <tr id="mRow">
-          <td id="mName"><%= k %></td>
-          <td id="mvalue"><%= v %></td>
+          <td id="mName" class="values"><%= k %></td>
+          <td id="mvalue" class="values"><%= v %></td>
         </tr>
       <%end%>
        </tbody>
