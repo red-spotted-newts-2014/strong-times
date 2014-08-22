@@ -16,14 +16,14 @@ class ExerciseHistoriesController < ApplicationController
     @exercise_history = ExerciseHistory.find(params[:id])
     @exercise_name = @exercise_history.exercise.name
     if @exercise_name == "squats"
-      @history1 = {thighs: 20, glutes: 15, abs: 10}
+      @history1 = {thighs: 20, glutes: 15, abs: 10, biceps: 0, chest: 0}
       @history2  = {thighs: 20, glutes: 15, abs: 10}
     elsif @exercise_name == "bench press"
       @history1 = { chest: 20,  biceps: 10, abs: 5}
       @history2  = { chest: 20,  biceps: 10, abs: 5}
     elsif @exercise_name == "deadlift"
-      @history1 = {thighs: 5, chest: 10,  biceps: 12, glutes: 8, abs: 15}
-      @history2  = {thighs: 7, chest: 12,  biceps: 15, glutes: 8, abs: 15}
+      @history1 = {thighs: 5, back: 10,  biceps: 12, glutes: 8, abs: 15}
+      @history2  = {thighs: 7, back: 8,  biceps: 15, glutes: 5, abs: 10}
     elsif @exercise_name == "pullups"
       @history1 = {chest: 10,  biceps: 15, glutes: 5, abs: 15}
       @history2 = {chest: 12,  biceps: 15, glutes: 5, abs:  15}
