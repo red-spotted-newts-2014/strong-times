@@ -21,3 +21,5 @@
 
 **database.yml
 .ruby-version
+
+public/assets/**
