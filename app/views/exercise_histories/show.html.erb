@@ -19,6 +19,25 @@
        </tbody>
      </table>
      <button class="viewMuscles">chart</button>
+
+      <table style="width:200px" id="muscle_table_2">
+      <th>
+        <caption class="values"><%= @exercise_name.upcase %></caption>
+        <tr>
+        <td class="values">Name</td>
+        <td class="values">Sets</td>
+        </tr>
+      </th>
+      <tbody id="muscle_table_body">
+      <% @history2.each do |k,v|%>
+        <tr id="mRow">
+          <td id="mName" class="values"><%= k %></td>
+          <td id="mvalue" class="values"><%= v %></td>
+        </tr>
+      <%end%>
+       </tbody>
+     </table>
+     <button class="viewMuscles2">chart</button>
   </div>
 </div>
 
@@ -29,28 +48,4 @@
 </div>
 
 <div id="line-chart" style="min-width: 400px; max-width: 600px; height: 400px; margin-top: 0px; float: right;"></div>
-<!--
-<table style="width:900px" id="exercise_table">
-    <th>
-      <tr>
-      <td>Name</td>
-      <td>Sets</td>
-      <td>Reps</td>
-      <td>Weight</td>
-      <td>Tempo</td>
-      <td>Date</td>
-      </tr>
-    </th>
-    <tbody id="exercise_table_body">
-      <% current_user.exercise_histories.each do |exercise| %>
-        <tr>
-          <td><%= exercise.name %></td>
-          <td> <%= exercise.sets %></td>
-          <td> <%= exercise.reps %></td>
-          <td> <%= exercise.weight %></td>
-          <td> <%= exercise.tempo %></td>
-          <td> <%= exercise.created_at %></td>
-       </tr>
-       <% end%>
-      </tbody>
-  </table> -->
+

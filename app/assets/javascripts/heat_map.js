@@ -59,7 +59,7 @@ $(function () {
         },
 
         xAxis: {
-            categories: ['Abs', 'Squats', 'Biceps', 'Glutes',
+            categories: ['Abs', 'Triceps', 'Biceps', 'Glutes',
                     'Calves', 'Chest'],
             tickmarkPlacement: 'on',
             lineWidth: 0
