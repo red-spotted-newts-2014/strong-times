@@ -9,11 +9,11 @@
   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
-  <link href="parralax.css" rel="stylesheet">
+  <link href="background.css" rel="stylesheet">
 </head>
-<body>
-    <%= yield %>
-  </div>
-
+ <body >
+ 	<div class="background">
+     <%= yield %>
+	</div>
 </body>
 </html>

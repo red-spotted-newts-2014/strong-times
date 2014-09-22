@@ -2,10 +2,14 @@ body {
   text-align: center;
 }
 
-h2 {
+h2 a {
+  color: black;
   text-align: center;
   font-size: 60px;
   text-transform: uppercase;
+}
+h3 {
+	color:black;
 }
 
 form {

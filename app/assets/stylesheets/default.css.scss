@@ -21,6 +21,8 @@ body{
 /*background-repeat: no-repeat;*/
 /*background-size: cover;*/
 /*background-image: url('background.jpg')*/
+/* background-size: 100%;
+    background-image: url("workout.jpg");*/
 }
 
 .container {
@@ -33,5 +35,16 @@ footer {
   max-width: 90em;
   height: 75px;
   margin: auto;
+}
+
+.background6 {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 0%;
+  left: 0%;
+  z-index: -1;
+  background: url("workout_copy.jpg") no-repeat center center fixed;
+  background-size: cover;
 }
 

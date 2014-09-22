@@ -1,3 +1,7 @@
+<div class="background4">
+</div>
+
+<div class="wrapper">
 <h1><u><%= @workout.name.upcase %></u></h1>
 <h3><%= link_to "RETURN TO #{@workout.name.upcase} EXERCISES", workout_path(@workout.id) %></h3>
 <h3><%= link_to "RETURN TO ALL WORKOUTS", user_workouts_path(current_user) %><br/><br/>
@@ -11,7 +15,7 @@
 	<%= f.text_field :rest, :class => "exerciseFormInput", :placeholder => "REST" %><br/><br/>
 	<%= f.submit "Create" %>
 <% end %>
-
+</div>
 
 
 
